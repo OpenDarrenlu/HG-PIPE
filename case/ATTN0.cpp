@@ -69,30 +69,18 @@ const int LN_ENTRIES_RSQRT = 128;
 // q generation
 typedef ap_int  <   3   >   __q_we_t;
 typedef __attn_q_t          __q_bi_t;
-// const int Q_ADPT_FIFO_DEPTH
-// const int Q_WIND_FIFO_DEPTH
-// const int Q_WGHT_FIFO_DEPTH
-// const int Q_MACS_FIFO_DEPTH
 const int Q_WEIGHT_RAM_STYLE = BRAM_STYLE;
 const bool Q_USE_DSP = false;
 
 // k generation
 typedef ap_int  <   3   >   __k_we_t;
 typedef __attn_k_t          __k_bi_t;
-// const int K_ADPT_FIFO_DEPTH
-// const int K_WIND_FIFO_DEPTH
-// const int K_WGHT_FIFO_DEPTH
-// const int K_MACS_FIFO_DEPTH
 const int K_WEIGHT_RAM_STYLE = BRAM_STYLE;
 const bool K_USE_DSP = false;
 
 // v generation
 typedef ap_int  <   3   >   __v_we_t;
 typedef __attn_v_t          __v_bi_t;
-// const int V_ADPT_FIFO_DEPTH
-// const int V_WIND_FIFO_DEPTH
-// const int V_WGHT_FIFO_DEPTH
-// const int V_MACS_FIFO_DEPTH
 const int V_WEIGHT_RAM_STYLE = BRAM_STYLE;
 const bool V_USE_DSP = false;
 
@@ -116,10 +104,6 @@ typedef ap_int   <   9 >   __aq_cursor_t;
 const int AQ_ENTRIES = 64;
 
 // qk matmul
-// const int QK_MATMUL_ADPT_FIFO_DEPTH
-// const int QK_MATMUL_WIND_FIFO_DEPTH
-// const int QK_MATMUL_WGHT_FIFO_DEPTH
-// const int QK_MATMUL_MACS_FIFO_DEPTH
 const int QK_MATMUL_WEIGHT_RAM_STYLE = LRAM_STYLE;
 const bool QK_MATMUL_USE_DSP = false;
 
@@ -137,79 +121,17 @@ const int SOFTMAX_ENTRIES_EXP       = 32;
 const int SOFTMAX_ENTRIES_RECIP     = 64;
 
 // rv matmul
-// const int RV_MATMUL_ADPT_FIFO_DEPTH
-// const int RV_MATMUL_WIND_FIFO_DEPTH
-// const int RV_MATMUL_WGHT_FIFO_DEPTH
-// const int RV_MATMUL_MACS_FIFO_DEPTH
 const int RV_MATMUL_WEIGHT_RAM_STYLE = LRAM_STYLE;
 const bool RV_MATMUL_USE_DSP = false;
 
 // o matmul
 typedef ap_int  <   3   >   __o_we_t;
 typedef __attn_o_t          __o_bi_t;
-// const int O_MATMUL_ADPT_FIFO_DEPTH
-// const int O_MATMUL_WIND_FIFO_DEPTH
-// const int O_MATMUL_WGHT_FIFO_DEPTH
-// const int O_MATMUL_MACS_FIFO_DEPTH
 const int O_MATMUL_WEIGHT_RAM_STYLE = BRAM_STYLE;
 const bool O_MATMUL_USE_DSP = false;
 
 
 // FIFO depths
-// const int Q_ADPT_FIFO_DEPTH             = 16000;
-// const int Q_WIND_FIFO_DEPTH             = 16001;
-// const int Q_WGHT_FIFO_DEPTH             = 16002;
-// const int Q_MACS_FIFO_DEPTH             = 16003;
-
-// const int K_ADPT_FIFO_DEPTH             = 16004;
-// const int K_WIND_FIFO_DEPTH             = 16005;
-// const int K_WGHT_FIFO_DEPTH             = 16006;
-// const int K_MACS_FIFO_DEPTH             = 16007;
-
-// const int V_ADPT_FIFO_DEPTH             = 16008;
-// const int V_WIND_FIFO_DEPTH             = 16009;
-// const int V_WGHT_FIFO_DEPTH             = 16010;
-// const int V_MACS_FIFO_DEPTH             = 16011;
-
-// const int QK_MATMUL_ADPT_FIFO_DEPTH     = 16012;
-// const int QK_MATMUL_WIND_FIFO_DEPTH     = 16013;
-// const int QK_MATMUL_WGHT_FIFO_DEPTH     = 16014;
-// const int QK_MATMUL_MACS_FIFO_DEPTH     = 16015;
-
-// const int RV_MATMUL_ADPT_FIFO_DEPTH     = 16016;
-// const int RV_MATMUL_WIND_FIFO_DEPTH     = 16017;
-// const int RV_MATMUL_WGHT_FIFO_DEPTH     = 16018;
-// const int RV_MATMUL_MACS_FIFO_DEPTH     = 16019;
-
-// const int O_MATMUL_ADPT_FIFO_DEPTH      = 16020;
-// const int O_MATMUL_WIND_FIFO_DEPTH      = 16021;
-// const int O_MATMUL_WGHT_FIFO_DEPTH      = 16022;
-// const int O_MATMUL_MACS_FIFO_DEPTH      = 16023;
-
-// const int MAIN_FIFO_DEPTH               = 16024;
-// const int RESI_I_FIFO_DEPTH             = 16025;
-// const int RESI_FIFO_DEPTH               = 16026;
-// const int RESI_O_FIFO_DEPTH             = 16027;
-// const int LNQ_FIFO_DEPTH                = 16028;
-// const int LNQ_CP_FIFO_DEPTH             = 16029;
-// const int Q_FIFO_DEPTH                  = 16030;
-// const int K_FIFO_DEPTH                  = 16031;
-// const int V_FIFO_DEPTH                  = 16032;
-// const int QQ_FIFO_DEPTH                 = 16033;
-// const int KQ_FIFO_DEPTH                 = 16034;
-// const int VQ_FIFO_DEPTH                 = 16035;
-// const int QQ_HEAD_FIFO_DEPTH            = 16036;
-// const int KQ_HEAD_FIFO_DEPTH            = 16037;
-// const int VQ_HEAD_FIFO_DEPTH            = 16038;
-// const int R_HEAD_FIFO_DEPTH             = 16039;
-// const int RQ_HEAD_FIFO_DEPTH            = 16040;
-// const int KQ_RESHAPE_HEAD_FIFO_DEPTH    = 16041;
-// const int VQ_TRANSPOSE_HEAD_FIFO_DEPTH  = 16042;
-// const int A_HEAD_FIFO_DEPTH             = 16043;
-// const int A_FIFO_DEPTH                  = 16044;
-// const int AQ_FIFO_DEPTH                 = 16045;
-// const int O_FIFO_DEPTH                  = 16046;
-
 const int Q_ADPT_FIFO_DEPTH             = 32;
 const int Q_WIND_FIFO_DEPTH             = 2;
 const int Q_WGHT_FIFO_DEPTH             = 0;

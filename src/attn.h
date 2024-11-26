@@ -524,157 +524,158 @@ public:
         stream_merge                        (   resi_o_sm,      o_sm,    o_stream                   );
     }
 
-    // // #ifndef __SYNTHESIS__
+    #ifndef __SYNTHESIS__
 
-    // // void do_attn(
-    // //     hls::stream<hls::vector<__attn_if_t, TP*CAP> >& i_stream,
-    // //     hls::stream<hls::vector<__attn_of_t, TP*CAP> >& o_stream,
-    // //     const int main_ref                  [T*C],
-    // //     const int lnq_ref                   [T*C],
-    // //     const int q_ref                     [T*C],
-    // //     const int k_ref                     [T*C],
-    // //     const int v_ref                     [T*C],
-    // //     const int qq_ref                    [T*C],
-    // //     const int kq_ref                    [T*C],
-    // //     const int vq_ref                    [T*C],
-    // //     const int qq_split_head1_ref        [T*CH],
-    // //     const int qq_split_head2_ref        [T*CH],
-    // //     const int qq_split_head3_ref        [T*CH],
-    // //     const int kq_split_head1_ref        [T*CH],
-    // //     const int kq_split_head2_ref        [T*CH],
-    // //     const int kq_split_head3_ref        [T*CH],
-    // //     const int vq_split_head1_ref        [T*CH],
-    // //     const int vq_split_head2_ref        [T*CH],
-    // //     const int vq_split_head3_ref        [T*CH],
-    // //     const int qk_matmul_head1_ref       [T*T],
-    // //     const int qk_matmul_head2_ref       [T*T],
-    // //     const int qk_matmul_head3_ref       [T*T],
-    // //     const int softmax_head1_ref         [T*T],
-    // //     const int softmax_head2_ref         [T*T],
-    // //     const int softmax_head3_ref         [T*T],
-    // //     const int vq_reshape_head1_ref      [T*CH],
-    // //     const int vq_reshape_head2_ref      [T*CH],
-    // //     const int vq_reshape_head3_ref      [T*CH],
-    // //     const int rv_matmul_head1_ref       [T*CH],
-    // //     const int rv_matmul_head2_ref       [T*CH],
-    // //     const int rv_matmul_head3_ref       [T*CH],
-    // //     const int aq_ref                    [T*C],
-    // //     const int o_matmul_ref              [T*C],
-    // //     const int y_ref                     [T*C]
-    // // ) {
-    // //     #pragma HLS dataflow
+    // for debugging
+    void do_attn(
+        hls::stream<hls::vector<__attn_if_t, TP*CAP> >& i_stream,
+        hls::stream<hls::vector<__attn_of_t, TP*CAP> >& o_stream,
+        const int main_ref                  [T*C],
+        const int lnq_ref                   [T*C],
+        const int q_ref                     [T*C],
+        const int k_ref                     [T*C],
+        const int v_ref                     [T*C],
+        const int qq_ref                    [T*C],
+        const int kq_ref                    [T*C],
+        const int vq_ref                    [T*C],
+        const int qq_split_head1_ref        [T*CH],
+        const int qq_split_head2_ref        [T*CH],
+        const int qq_split_head3_ref        [T*CH],
+        const int kq_split_head1_ref        [T*CH],
+        const int kq_split_head2_ref        [T*CH],
+        const int kq_split_head3_ref        [T*CH],
+        const int vq_split_head1_ref        [T*CH],
+        const int vq_split_head2_ref        [T*CH],
+        const int vq_split_head3_ref        [T*CH],
+        const int qk_matmul_head1_ref       [T*T],
+        const int qk_matmul_head2_ref       [T*T],
+        const int qk_matmul_head3_ref       [T*T],
+        const int softmax_head1_ref         [T*T],
+        const int softmax_head2_ref         [T*T],
+        const int softmax_head3_ref         [T*T],
+        const int vq_reshape_head1_ref      [T*CH],
+        const int vq_reshape_head2_ref      [T*CH],
+        const int vq_reshape_head3_ref      [T*CH],
+        const int rv_matmul_head1_ref       [T*CH],
+        const int rv_matmul_head2_ref       [T*CH],
+        const int rv_matmul_head3_ref       [T*CH],
+        const int aq_ref                    [T*C],
+        const int o_matmul_ref              [T*C],
+        const int y_ref                     [T*C]
+    ) {
+        #pragma HLS dataflow
 
-    // //     // backbone streams
-    // //     // residual
-    // //     hls::stream<hls::vector<__attn_if_t,    TP          * CAP           > > main_sm                 ("main_sm");
-    // //     hls::stream<hls::vector<__attn_if_t,    TP          * CAP           > > resi_sm                 ("resi_sm");
-    // //     // layernorm
-    // //     hls::stream<hls::vector<__attn_lnq_t,   TP          * CAP           > > lnq_sm                  ("lnq_sm");
-    // //     // copied
-    // //     hls::stream<hls::vector<__attn_lnq_t,   TP          * CAP           > > lnq_sm_cp1              ("lnq_sm_cp1");
-    // //     hls::stream<hls::vector<__attn_lnq_t,   TP          * CAP           > > lnq_sm_cp2              ("lnq_sm_cp2");
-    // //     hls::stream<hls::vector<__attn_lnq_t,   TP          * CAP           > > lnq_sm_cp3              ("lnq_sm_cp3");
-    // //     // qkv matmul
-    // //     hls::stream<hls::vector<__attn_q_t,     TP          * Q_QKV_CP      > > q_sm                    ("q_sm");
-    // //     hls::stream<hls::vector<__attn_k_t,     TP          * Q_QKV_CP      > > k_sm                    ("k_sm");
-    // //     hls::stream<hls::vector<__attn_v_t,     TP          * Q_QKV_CP      > > v_sm                    ("v_sm");
-    // //     // qkv quant
-    // //     hls::stream<hls::vector<__attn_qq_t,    TP          * Q_QKV_CP      > > qq_sm                   ("qq_sm");
-    // //     hls::stream<hls::vector<__attn_kq_t,    TP          * Q_QKV_CP      > > kq_sm                   ("kq_sm");
-    // //     hls::stream<hls::vector<__attn_vq_t,    TP          * Q_QKV_CP      > > vq_sm                   ("vq_sm");
-    // //     // head split
-    // //     hls::stream<hls::vector<__attn_qq_t,    TP          * Q_QKV_CP      > > qq_sm_head1             ("qq_sm_head1");
-    // //     hls::stream<hls::vector<__attn_qq_t,    TP          * Q_QKV_CP      > > qq_sm_head2             ("qq_sm_head2");
-    // //     hls::stream<hls::vector<__attn_qq_t,    TP          * Q_QKV_CP      > > qq_sm_head3             ("qq_sm_head3");
-    // //     // head split
-    // //     hls::stream<hls::vector<__attn_kq_t,    TP          * Q_QKV_CP      > > kq_sm_head1             ("kq_sm_head1");
-    // //     hls::stream<hls::vector<__attn_kq_t,    TP          * Q_QKV_CP      > > kq_sm_head2             ("kq_sm_head2");
-    // //     hls::stream<hls::vector<__attn_kq_t,    TP          * Q_QKV_CP      > > kq_sm_head3             ("kq_sm_head3");
-    // //     // head split
-    // //     hls::stream<hls::vector<__attn_vq_t,    TP          * Q_QKV_CP      > > vq_sm_head1             ("vq_sm_head1");
-    // //     hls::stream<hls::vector<__attn_vq_t,    TP          * Q_QKV_CP      > > vq_sm_head2             ("vq_sm_head2");
-    // //     hls::stream<hls::vector<__attn_vq_t,    TP          * Q_QKV_CP      > > vq_sm_head3             ("vq_sm_head3");
-    // //     // qk matmul result
-    // //     hls::stream<hls::vector<__attn_r_t,     TP          * RQ_CP         > > r_sm_head1              ("r_sm_head1");
-    // //     hls::stream<hls::vector<__attn_r_t,     TP          * RQ_CP         > > r_sm_head2              ("r_sm_head2");
-    // //     hls::stream<hls::vector<__attn_r_t,     TP          * RQ_CP         > > r_sm_head3              ("r_sm_head3");
-    // //     // softmaxq result
-    // //     hls::stream<hls::vector<__attn_rq_t,    TP          * RQ_CP         > > rq_sm_head1             ("rq_sm_head1");
-    // //     hls::stream<hls::vector<__attn_rq_t,    TP          * RQ_CP         > > rq_sm_head2             ("rq_sm_head2");
-    // //     hls::stream<hls::vector<__attn_rq_t,    TP          * RQ_CP         > > rq_sm_head3             ("rq_sm_head3");
-    // //     // reshape
-    // //     hls::stream<hls::vector<__attn_kq_t,    MATMUL_R_COP* MATMUL_R_CIP  > > kq_sm_reshape_head1     ("kq_sm_reshape_head1");
-    // //     hls::stream<hls::vector<__attn_kq_t,    MATMUL_R_COP* MATMUL_R_CIP  > > kq_sm_reshape_head2     ("kq_sm_reshape_head2");
-    // //     hls::stream<hls::vector<__attn_kq_t,    MATMUL_R_COP* MATMUL_R_CIP  > > kq_sm_reshape_head3     ("kq_sm_reshape_head3");
-    // //     hls::stream<hls::vector<__attn_vq_t,    MATMUL_A_COP* MATMUL_A_CIP  > > vq_sm_transpose_head1   ("vq_sm_transpose_head1");
-    // //     hls::stream<hls::vector<__attn_vq_t,    MATMUL_A_COP* MATMUL_A_CIP  > > vq_sm_transpose_head2   ("vq_sm_transpose_head2");
-    // //     hls::stream<hls::vector<__attn_vq_t,    MATMUL_A_COP* MATMUL_A_CIP  > > vq_sm_transpose_head3   ("vq_sm_transpose_head3");
-    // //     // rv matmul result
-    // //     hls::stream<hls::vector<__attn_a_t,     TP          * AQ_CP         > > a_sm_head1              ("a_sm_head1");
-    // //     hls::stream<hls::vector<__attn_a_t,     TP          * AQ_CP         > > a_sm_head2              ("a_sm_head2");
-    // //     hls::stream<hls::vector<__attn_a_t,     TP          * AQ_CP         > > a_sm_head3              ("a_sm_head3");
-    // //     // head merge
-    // //     hls::stream<hls::vector<__attn_a_t,     TP          * AQ_CP         > > a_sm                    ("a_sm");
-    // //     // a quant
-    // //     hls::stream<hls::vector<__attn_aq_t,    TP          * AQ_CP         > > aq_sm                   ("aq_sm");
-    // //     // ao matmul
-    // //     hls::stream<hls::vector<__attn_o_t,     TP          * CAP           > > o_sm                    ("o_sm");
+        // backbone streams
+        // residual
+        hls::stream<hls::vector<__attn_if_t,    TP          * CAP           > > main_sm                 ("main_sm");
+        hls::stream<hls::vector<__attn_if_t,    TP          * CAP           > > resi_sm                 ("resi_sm");
+        // layernorm
+        hls::stream<hls::vector<__attn_lnq_t,   TP          * CAP           > > lnq_sm                  ("lnq_sm");
+        // copied
+        hls::stream<hls::vector<__attn_lnq_t,   TP          * CAP           > > lnq_sm_cp1              ("lnq_sm_cp1");
+        hls::stream<hls::vector<__attn_lnq_t,   TP          * CAP           > > lnq_sm_cp2              ("lnq_sm_cp2");
+        hls::stream<hls::vector<__attn_lnq_t,   TP          * CAP           > > lnq_sm_cp3              ("lnq_sm_cp3");
+        // qkv matmul
+        hls::stream<hls::vector<__attn_q_t,     TP          * Q_QKV_CP      > > q_sm                    ("q_sm");
+        hls::stream<hls::vector<__attn_k_t,     TP          * Q_QKV_CP      > > k_sm                    ("k_sm");
+        hls::stream<hls::vector<__attn_v_t,     TP          * Q_QKV_CP      > > v_sm                    ("v_sm");
+        // qkv quant
+        hls::stream<hls::vector<__attn_qq_t,    TP          * Q_QKV_CP      > > qq_sm                   ("qq_sm");
+        hls::stream<hls::vector<__attn_kq_t,    TP          * Q_QKV_CP      > > kq_sm                   ("kq_sm");
+        hls::stream<hls::vector<__attn_vq_t,    TP          * Q_QKV_CP      > > vq_sm                   ("vq_sm");
+        // head split
+        hls::stream<hls::vector<__attn_qq_t,    TP          * Q_QKV_CP      > > qq_sm_head1             ("qq_sm_head1");
+        hls::stream<hls::vector<__attn_qq_t,    TP          * Q_QKV_CP      > > qq_sm_head2             ("qq_sm_head2");
+        hls::stream<hls::vector<__attn_qq_t,    TP          * Q_QKV_CP      > > qq_sm_head3             ("qq_sm_head3");
+        // head split
+        hls::stream<hls::vector<__attn_kq_t,    TP          * Q_QKV_CP      > > kq_sm_head1             ("kq_sm_head1");
+        hls::stream<hls::vector<__attn_kq_t,    TP          * Q_QKV_CP      > > kq_sm_head2             ("kq_sm_head2");
+        hls::stream<hls::vector<__attn_kq_t,    TP          * Q_QKV_CP      > > kq_sm_head3             ("kq_sm_head3");
+        // head split
+        hls::stream<hls::vector<__attn_vq_t,    TP          * Q_QKV_CP      > > vq_sm_head1             ("vq_sm_head1");
+        hls::stream<hls::vector<__attn_vq_t,    TP          * Q_QKV_CP      > > vq_sm_head2             ("vq_sm_head2");
+        hls::stream<hls::vector<__attn_vq_t,    TP          * Q_QKV_CP      > > vq_sm_head3             ("vq_sm_head3");
+        // qk matmul result
+        hls::stream<hls::vector<__attn_r_t,     TP          * RQ_CP         > > r_sm_head1              ("r_sm_head1");
+        hls::stream<hls::vector<__attn_r_t,     TP          * RQ_CP         > > r_sm_head2              ("r_sm_head2");
+        hls::stream<hls::vector<__attn_r_t,     TP          * RQ_CP         > > r_sm_head3              ("r_sm_head3");
+        // softmaxq result
+        hls::stream<hls::vector<__attn_rq_t,    TP          * RQ_CP         > > rq_sm_head1             ("rq_sm_head1");
+        hls::stream<hls::vector<__attn_rq_t,    TP          * RQ_CP         > > rq_sm_head2             ("rq_sm_head2");
+        hls::stream<hls::vector<__attn_rq_t,    TP          * RQ_CP         > > rq_sm_head3             ("rq_sm_head3");
+        // reshape
+        hls::stream<hls::vector<__attn_kq_t,    MATMUL_R_COP* MATMUL_R_CIP  > > kq_sm_reshape_head1     ("kq_sm_reshape_head1");
+        hls::stream<hls::vector<__attn_kq_t,    MATMUL_R_COP* MATMUL_R_CIP  > > kq_sm_reshape_head2     ("kq_sm_reshape_head2");
+        hls::stream<hls::vector<__attn_kq_t,    MATMUL_R_COP* MATMUL_R_CIP  > > kq_sm_reshape_head3     ("kq_sm_reshape_head3");
+        hls::stream<hls::vector<__attn_vq_t,    MATMUL_A_COP* MATMUL_A_CIP  > > vq_sm_transpose_head1   ("vq_sm_transpose_head1");
+        hls::stream<hls::vector<__attn_vq_t,    MATMUL_A_COP* MATMUL_A_CIP  > > vq_sm_transpose_head2   ("vq_sm_transpose_head2");
+        hls::stream<hls::vector<__attn_vq_t,    MATMUL_A_COP* MATMUL_A_CIP  > > vq_sm_transpose_head3   ("vq_sm_transpose_head3");
+        // rv matmul result
+        hls::stream<hls::vector<__attn_a_t,     TP          * AQ_CP         > > a_sm_head1              ("a_sm_head1");
+        hls::stream<hls::vector<__attn_a_t,     TP          * AQ_CP         > > a_sm_head2              ("a_sm_head2");
+        hls::stream<hls::vector<__attn_a_t,     TP          * AQ_CP         > > a_sm_head3              ("a_sm_head3");
+        // head merge
+        hls::stream<hls::vector<__attn_a_t,     TP          * AQ_CP         > > a_sm                    ("a_sm");
+        // a quant
+        hls::stream<hls::vector<__attn_aq_t,    TP          * AQ_CP         > > aq_sm                   ("aq_sm");
+        // ao matmul
+        hls::stream<hls::vector<__attn_o_t,     TP          * CAP           > > o_sm                    ("o_sm");
 
-    // //     // residual
-    // //     stream_copy2                        (   i_stream,       main_sm,    resi_sm                     );          // check_stream<__attn_if_t,   T, TP, C, CAP>(main_sm,     main_ref,   "main");        
-    // //                                                                                                                 // check_stream<__attn_if_t,   T, TP, C, CAP>(resi_sm,     main_ref,   "resi");
-    // //     // layernorm
-    // //     lnq.                do_layernorm    (   main_sm,        lnq_sm                                  );          // check_stream<__attn_lnq_t,  T, TP, C, CAP>(lnq_sm,      lnq_ref,    "lnq");
-    // //     // copy stream 3 times,
-    // //     stream_copy3                        (   lnq_sm,         lnq_sm_cp1, lnq_sm_cp2,  lnq_sm_cp3     );          // check_stream<__attn_lnq_t,  T, TP, C, CAP>(lnq_sm_cp1,  lnq_ref,    "lnq_cp1");
-    // //                                                                                                                 // check_stream<__attn_lnq_t,  T, TP, C, CAP>(lnq_sm_cp2,  lnq_ref,    "lnq_cp2");
-    // //                                                                                                                 // check_stream<__attn_lnq_t,  T, TP, C, CAP>(lnq_sm_cp3,  lnq_ref,    "lnq_cp3");
-    // //     // qkv matmul
-    // //     matmul_gen_q.       do_matmul       (   lnq_sm_cp1,     q_sm        );                                      // check_stream<__attn_q_t,    T, TP, C, Q_QKV_CP>(q_sm,       q_ref,      "q");
-    // //     matmul_gen_k.       do_matmul       (   lnq_sm_cp2,     k_sm        );                                      // check_stream<__attn_k_t,    T, TP, C, Q_QKV_CP>(k_sm,       k_ref,      "k");
-    // //     matmul_gen_v.       do_matmul       (   lnq_sm_cp3,     v_sm        );                                      // check_stream<__attn_v_t,    T, TP, C, Q_QKV_CP>(v_sm,       v_ref,      "v");
-    // //     // qkv quant
-    // //     quant_q.            do_quant        (   q_sm,           qq_sm       );                                      // check_stream<__attn_qq_t,   T, TP, C, Q_QKV_CP>(qq_sm,      qq_ref,     "qq");
-    // //     quant_k.            do_quant        (   k_sm,           kq_sm       );                                      // check_stream<__attn_kq_t,   T, TP, C, Q_QKV_CP>(kq_sm,      kq_ref,     "kq");
-    // //     quant_v.            do_quant        (   v_sm,           vq_sm       );                                      // check_stream<__attn_vq_t,   T, TP, C, Q_QKV_CP>(vq_sm,      vq_ref,     "vq");
-    // //     // head split
-    // //     split_q.            do_split        (   qq_sm,          qq_sm_head1,    qq_sm_head2,    qq_sm_head3    );   // check_stream<__attn_qq_t,   T, TP, CH, Q_QKV_CP>(qq_sm_head1, qq_split_head1_ref, "qq_head1");   
-    // //                                                                                                                 // check_stream<__attn_qq_t,   T, TP, CH, Q_QKV_CP>(qq_sm_head2, qq_split_head2_ref, "qq_head2");   
-    // //                                                                                                                 // check_stream<__attn_qq_t,   T, TP, CH, Q_QKV_CP>(qq_sm_head3, qq_split_head3_ref, "qq_head3");
-    // //     split_k.            do_split        (   kq_sm,          kq_sm_head1,    kq_sm_head2,    kq_sm_head3    );   // check_stream<__attn_kq_t,   T, TP, CH, Q_QKV_CP>(kq_sm_head1, kq_split_head1_ref, "kq_head1");   
-    // //                                                                                                                 // check_stream<__attn_kq_t,   T, TP, CH, Q_QKV_CP>(kq_sm_head2, kq_split_head2_ref, "kq_head2");   
-    // //                                                                                                                 // check_stream<__attn_kq_t,   T, TP, CH, Q_QKV_CP>(kq_sm_head3, kq_split_head3_ref, "kq_head3");
-    // //     split_v.            do_split        (   vq_sm,          vq_sm_head1,    vq_sm_head2,    vq_sm_head3    );   // check_stream<__attn_vq_t,   T, TP, CH, Q_QKV_CP>(vq_sm_head1, vq_split_head1_ref, "vq_head1");
-    // //                                                                                                                 // check_stream<__attn_vq_t,   T, TP, CH, Q_QKV_CP>(vq_sm_head2, vq_split_head2_ref, "vq_head2");
-    // //                                                                                                                 // check_stream<__attn_vq_t,   T, TP, CH, Q_QKV_CP>(vq_sm_head3, vq_split_head3_ref, "vq_head3");
-    // //     // reshape
-    // //     reshape_k_head1.    do_reshape      (   kq_sm_head1,    kq_sm_reshape_head1,    false);                     // check_stream<__attn_kq_t,   T, MATMUL_R_COP, CH, MATMUL_R_CIP>(kq_sm_reshape_head1, kq_split_head1_ref, "kq_reshape_head1");
-    // //     reshape_k_head2.    do_reshape      (   kq_sm_head2,    kq_sm_reshape_head2,    false);                     // check_stream<__attn_kq_t,   T, MATMUL_R_COP, CH, MATMUL_R_CIP>(kq_sm_reshape_head2, kq_split_head2_ref, "kq_reshape_head2");
-    // //     reshape_k_head3.    do_reshape      (   kq_sm_head3,    kq_sm_reshape_head3,    false);                     // check_stream<__attn_kq_t,   T, MATMUL_R_COP, CH, MATMUL_R_CIP>(kq_sm_reshape_head3, kq_split_head3_ref, "kq_reshape_head3");
-    // //     // qk matmul
-    // //     matmul_qk_head1.    do_matmul       (   qq_sm_head1,    kq_sm_reshape_head1,    r_sm_head1, false);         // check_stream<__attn_r_t,    T, TP, T, RQ_CP>(r_sm_head1, qk_matmul_head1_ref, "qk_matmul_head1");
-    // //     matmul_qk_head2.    do_matmul       (   qq_sm_head2,    kq_sm_reshape_head2,    r_sm_head2, false);         // check_stream<__attn_r_t,    T, TP, T, RQ_CP>(r_sm_head2, qk_matmul_head2_ref, "qk_matmul_head2");
-    // //     matmul_qk_head3.    do_matmul       (   qq_sm_head3,    kq_sm_reshape_head3,    r_sm_head3, false);         // check_stream<__attn_r_t,    T, TP, T, RQ_CP>(r_sm_head3, qk_matmul_head3_ref, "qk_matmul_head3");
-    // //     // softmaxq
-    // //     softmax_qk_head1.   do_softmax      (   r_sm_head1,     rq_sm_head1     );                                  // check_stream<__attn_rq_t,   T, TP, T, RQ_CP>(rq_sm_head1, softmax_head1_ref, "softmax_head1");
-    // //     softmax_qk_head2.   do_softmax      (   r_sm_head2,     rq_sm_head2     );                                  // check_stream<__attn_rq_t,   T, TP, T, RQ_CP>(rq_sm_head2, softmax_head2_ref, "softmax_head2");
-    // //     softmax_qk_head3.   do_softmax      (   r_sm_head3,     rq_sm_head3     );                                  // check_stream<__attn_rq_t,   T, TP, T, RQ_CP>(rq_sm_head3, softmax_head3_ref, "softmax_head3");
-    // //     // reshape
-    // //     reshape_v_head1.    do_reshape      (   vq_sm_head1,    vq_sm_transpose_head1,  true);                      // check_stream<__attn_vq_t,   CH, MATMUL_A_COP, T, MATMUL_A_CIP>(vq_sm_transpose_head1, vq_reshape_head1_ref, "vq_reshape_head1");
-    // //     reshape_v_head2.    do_reshape      (   vq_sm_head2,    vq_sm_transpose_head2,  true);                      // check_stream<__attn_vq_t,   CH, MATMUL_A_COP, T, MATMUL_A_CIP>(vq_sm_transpose_head2, vq_reshape_head2_ref, "vq_reshape_head2");
-    // //     reshape_v_head3.    do_reshape      (   vq_sm_head3,    vq_sm_transpose_head3,  true);                      // check_stream<__attn_vq_t,   CH, MATMUL_A_COP, T, MATMUL_A_CIP>(vq_sm_transpose_head3, vq_reshape_head3_ref, "vq_reshape_head3");
-    // //     // rv matmul
-    // //     matmul_rv_head1.    do_matmul       (   rq_sm_head1,    vq_sm_transpose_head1,  a_sm_head1, true);          check_stream<__attn_a_t,    T, TP, CH, AQ_CP>(a_sm_head1, rv_matmul_head1_ref, "rv_matmul_head1");
-    // //     matmul_rv_head2.    do_matmul       (   rq_sm_head2,    vq_sm_transpose_head2,  a_sm_head2, true);          check_stream<__attn_a_t,    T, TP, CH, AQ_CP>(a_sm_head2, rv_matmul_head2_ref, "rv_matmul_head2");
-    // //     matmul_rv_head3.    do_matmul       (   rq_sm_head3,    vq_sm_transpose_head3,  a_sm_head3, true);          check_stream<__attn_a_t,    T, TP, CH, AQ_CP>(a_sm_head3, rv_matmul_head3_ref, "rv_matmul_head3");
-    // //     // head merge
-    // //     merge_a.            do_merge        (   a_sm_head1,     a_sm_head2,     a_sm_head3,     a_sm);              
-    // //     quant_a.            do_quant        (   a_sm,           aq_sm                               );              check_stream<__attn_aq_t,   T, TP, C,  AQ_CP>   (aq_sm, aq_ref,         "aq");
-    // //     matmul_gen_o.       do_matmul       (   aq_sm,          o_sm                                );              check_stream<__attn_o_t,    T, TP, C,  CAP>     (o_sm,  o_matmul_ref,   "o");
-    // //     stream_merge                        (   resi_sm,        o_sm,    o_stream                   );              check_stream<__attn_of_t,   T, TP, C,  CAP>     (o_stream, y_ref,       "y");
-    // // }
+        // residual
+        stream_copy2                        (   i_stream,       main_sm,    resi_sm                     );          check_stream<__attn_if_t,   T, TP, C, CAP>(main_sm,     main_ref,   "main");        
+                                                                                                                    check_stream<__attn_if_t,   T, TP, C, CAP>(resi_sm,     main_ref,   "resi");
+        // layernorm
+        lnq.                do_layernorm    (   main_sm,        lnq_sm                                  );          check_stream<__attn_lnq_t,  T, TP, C, CAP>(lnq_sm,      lnq_ref,    "lnq");
+        // copy stream 3 times,
+        stream_copy3                        (   lnq_sm,         lnq_sm_cp1, lnq_sm_cp2,  lnq_sm_cp3     );          check_stream<__attn_lnq_t,  T, TP, C, CAP>(lnq_sm_cp1,  lnq_ref,    "lnq_cp1");
+                                                                                                                    check_stream<__attn_lnq_t,  T, TP, C, CAP>(lnq_sm_cp2,  lnq_ref,    "lnq_cp2");
+                                                                                                                    check_stream<__attn_lnq_t,  T, TP, C, CAP>(lnq_sm_cp3,  lnq_ref,    "lnq_cp3");
+        // qkv matmul
+        matmul_gen_q.       do_matmul       (   lnq_sm_cp1,     q_sm        );                                      check_stream<__attn_q_t,    T, TP, C, Q_QKV_CP>(q_sm,       q_ref,      "q");
+        matmul_gen_k.       do_matmul       (   lnq_sm_cp2,     k_sm        );                                      check_stream<__attn_k_t,    T, TP, C, Q_QKV_CP>(k_sm,       k_ref,      "k");
+        matmul_gen_v.       do_matmul       (   lnq_sm_cp3,     v_sm        );                                      check_stream<__attn_v_t,    T, TP, C, Q_QKV_CP>(v_sm,       v_ref,      "v");
+        // qkv quant
+        quant_q.            do_quant        (   q_sm,           qq_sm       );                                      check_stream<__attn_qq_t,   T, TP, C, Q_QKV_CP>(qq_sm,      qq_ref,     "qq");
+        quant_k.            do_quant        (   k_sm,           kq_sm       );                                      check_stream<__attn_kq_t,   T, TP, C, Q_QKV_CP>(kq_sm,      kq_ref,     "kq");
+        quant_v.            do_quant        (   v_sm,           vq_sm       );                                      check_stream<__attn_vq_t,   T, TP, C, Q_QKV_CP>(vq_sm,      vq_ref,     "vq");
+        // head split
+        split_q.            do_split        (   qq_sm,          qq_sm_head1,    qq_sm_head2,    qq_sm_head3    );   check_stream<__attn_qq_t,   T, TP, CH, Q_QKV_CP>(qq_sm_head1, qq_split_head1_ref, "qq_head1");   
+                                                                                                                    check_stream<__attn_qq_t,   T, TP, CH, Q_QKV_CP>(qq_sm_head2, qq_split_head2_ref, "qq_head2");   
+                                                                                                                    check_stream<__attn_qq_t,   T, TP, CH, Q_QKV_CP>(qq_sm_head3, qq_split_head3_ref, "qq_head3");
+        split_k.            do_split        (   kq_sm,          kq_sm_head1,    kq_sm_head2,    kq_sm_head3    );   check_stream<__attn_kq_t,   T, TP, CH, Q_QKV_CP>(kq_sm_head1, kq_split_head1_ref, "kq_head1");   
+                                                                                                                    check_stream<__attn_kq_t,   T, TP, CH, Q_QKV_CP>(kq_sm_head2, kq_split_head2_ref, "kq_head2");   
+                                                                                                                    check_stream<__attn_kq_t,   T, TP, CH, Q_QKV_CP>(kq_sm_head3, kq_split_head3_ref, "kq_head3");
+        split_v.            do_split        (   vq_sm,          vq_sm_head1,    vq_sm_head2,    vq_sm_head3    );   check_stream<__attn_vq_t,   T, TP, CH, Q_QKV_CP>(vq_sm_head1, vq_split_head1_ref, "vq_head1");
+                                                                                                                    check_stream<__attn_vq_t,   T, TP, CH, Q_QKV_CP>(vq_sm_head2, vq_split_head2_ref, "vq_head2");
+                                                                                                                    check_stream<__attn_vq_t,   T, TP, CH, Q_QKV_CP>(vq_sm_head3, vq_split_head3_ref, "vq_head3");
+        // reshape
+        reshape_k_head1.    do_reshape      (   kq_sm_head1,    kq_sm_reshape_head1,    false);                     check_stream<__attn_kq_t,   T, MATMUL_R_COP, CH, MATMUL_R_CIP>(kq_sm_reshape_head1, kq_split_head1_ref, "kq_reshape_head1");
+        reshape_k_head2.    do_reshape      (   kq_sm_head2,    kq_sm_reshape_head2,    false);                     check_stream<__attn_kq_t,   T, MATMUL_R_COP, CH, MATMUL_R_CIP>(kq_sm_reshape_head2, kq_split_head2_ref, "kq_reshape_head2");
+        reshape_k_head3.    do_reshape      (   kq_sm_head3,    kq_sm_reshape_head3,    false);                     check_stream<__attn_kq_t,   T, MATMUL_R_COP, CH, MATMUL_R_CIP>(kq_sm_reshape_head3, kq_split_head3_ref, "kq_reshape_head3");
+        // qk matmul
+        matmul_qk_head1.    do_matmul       (   qq_sm_head1,    kq_sm_reshape_head1,    r_sm_head1, false);         check_stream<__attn_r_t,    T, TP, T, RQ_CP>(r_sm_head1, qk_matmul_head1_ref, "qk_matmul_head1");
+        matmul_qk_head2.    do_matmul       (   qq_sm_head2,    kq_sm_reshape_head2,    r_sm_head2, false);         check_stream<__attn_r_t,    T, TP, T, RQ_CP>(r_sm_head2, qk_matmul_head2_ref, "qk_matmul_head2");
+        matmul_qk_head3.    do_matmul       (   qq_sm_head3,    kq_sm_reshape_head3,    r_sm_head3, false);         check_stream<__attn_r_t,    T, TP, T, RQ_CP>(r_sm_head3, qk_matmul_head3_ref, "qk_matmul_head3");
+        // softmaxq
+        softmax_qk_head1.   do_softmax      (   r_sm_head1,     rq_sm_head1     );                                  check_stream<__attn_rq_t,   T, TP, T, RQ_CP>(rq_sm_head1, softmax_head1_ref, "softmax_head1");
+        softmax_qk_head2.   do_softmax      (   r_sm_head2,     rq_sm_head2     );                                  check_stream<__attn_rq_t,   T, TP, T, RQ_CP>(rq_sm_head2, softmax_head2_ref, "softmax_head2");
+        softmax_qk_head3.   do_softmax      (   r_sm_head3,     rq_sm_head3     );                                  check_stream<__attn_rq_t,   T, TP, T, RQ_CP>(rq_sm_head3, softmax_head3_ref, "softmax_head3");
+        // reshape
+        reshape_v_head1.    do_reshape      (   vq_sm_head1,    vq_sm_transpose_head1,  true);                      check_stream<__attn_vq_t,   CH, MATMUL_A_COP, T, MATMUL_A_CIP>(vq_sm_transpose_head1, vq_reshape_head1_ref, "vq_reshape_head1");
+        reshape_v_head2.    do_reshape      (   vq_sm_head2,    vq_sm_transpose_head2,  true);                      check_stream<__attn_vq_t,   CH, MATMUL_A_COP, T, MATMUL_A_CIP>(vq_sm_transpose_head2, vq_reshape_head2_ref, "vq_reshape_head2");
+        reshape_v_head3.    do_reshape      (   vq_sm_head3,    vq_sm_transpose_head3,  true);                      check_stream<__attn_vq_t,   CH, MATMUL_A_COP, T, MATMUL_A_CIP>(vq_sm_transpose_head3, vq_reshape_head3_ref, "vq_reshape_head3");
+        // rv matmul
+        matmul_rv_head1.    do_matmul       (   rq_sm_head1,    vq_sm_transpose_head1,  a_sm_head1, true);          check_stream<__attn_a_t,    T, TP, CH, AQ_CP>(a_sm_head1, rv_matmul_head1_ref, "rv_matmul_head1");
+        matmul_rv_head2.    do_matmul       (   rq_sm_head2,    vq_sm_transpose_head2,  a_sm_head2, true);          check_stream<__attn_a_t,    T, TP, CH, AQ_CP>(a_sm_head2, rv_matmul_head2_ref, "rv_matmul_head2");
+        matmul_rv_head3.    do_matmul       (   rq_sm_head3,    vq_sm_transpose_head3,  a_sm_head3, true);          check_stream<__attn_a_t,    T, TP, CH, AQ_CP>(a_sm_head3, rv_matmul_head3_ref, "rv_matmul_head3");
+        // head merge
+        merge_a.            do_merge        (   a_sm_head1,     a_sm_head2,     a_sm_head3,     a_sm);              
+        quant_a.            do_quant        (   a_sm,           aq_sm                               );              check_stream<__attn_aq_t,   T, TP, C,  AQ_CP>   (aq_sm, aq_ref,         "aq");
+        matmul_gen_o.       do_matmul       (   aq_sm,          o_sm                                );              check_stream<__attn_o_t,    T, TP, C,  CAP>     (o_sm,  o_matmul_ref,   "o");
+        stream_merge                        (   resi_sm,        o_sm,    o_stream                   );              check_stream<__attn_of_t,   T, TP, C,  CAP>     (o_stream, y_ref,       "y");
+    }
 
-    // // #endif
+    #endif
 
 };
 

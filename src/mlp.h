@@ -317,36 +317,36 @@ public:
 
     }
 
-    // #ifndef __SYNTHESIS__
-    // void do_mlp(
-    //     hls::stream<hls::vector<__mlp_if_t, TP*CAP> >& i_stream,
-    //     hls::stream<hls::vector<__mlp_of_t, TP*CAP> >& o_stream,
-    //     const int x_ref[],
-    //     const int lnq_ref[],
-    //     const int m1_ref[],
-    //     const int ge_ref[],
-    //     const int m2_ref[]
-    // ) {
+    #ifndef __SYNTHESIS__
 
-    //     #pragma HLS dataflow
+    // for debugging
+    void do_mlp(
+        hls::stream<hls::vector<__mlp_if_t, TP*CAP> >& i_stream,
+        hls::stream<hls::vector<__mlp_of_t, TP*CAP> >& o_stream,
+        const int x_ref[],
+        const int lnq_ref[],
+        const int m1_ref[],
+        const int ge_ref[],
+        const int m2_ref[]
+    ) {
+        #pragma HLS dataflow
 
-    //     hls::stream<hls::vector<__mlp_if_t, TP*CAP  > > main_sm;    // main branch
-    //     hls::stream<hls::vector<__mlp_if_t, TP*CAP  > > resi_sm;    // residual branch
-    //     hls::stream<hls::vector<__mlp_ln_t, TP*CAP  > > ln_sm;      // layernorm
-    //     hls::stream<hls::vector<__mlp_m1_t, TP*CHAP > > m1_sm;      // matmul 1
-    //     hls::stream<hls::vector<__mlp_ge_t, TP*CHAP > > ge_sm;      // gelu
-    //     hls::stream<hls::vector<__mlp_m2_t, TP*CAP  > > m2_sm;      // matmul 2
+        hls::stream<hls::vector<__mlp_if_t, TP*CAP  > > main_sm;    // main branch
+        hls::stream<hls::vector<__mlp_if_t, TP*CAP  > > resi_sm;    // residual branch
+        hls::stream<hls::vector<__mlp_ln_t, TP*CAP  > > ln_sm;      // layernorm
+        hls::stream<hls::vector<__mlp_m1_t, TP*CHAP > > m1_sm;      // matmul 1
+        hls::stream<hls::vector<__mlp_ge_t, TP*CHAP > > ge_sm;      // gelu
+        hls::stream<hls::vector<__mlp_m2_t, TP*CAP  > > m2_sm;      // matmul 2
 
-    //     this->  stream_copy     (   i_stream,  main_sm,    resi_sm  );  check_stream<__mlp_if_t, T, TP, C,  CAP >(main_sm,  x_ref,      "main");
-    //     lnq.    do_layernorm    (   main_sm,   ln_sm                );  check_stream<__mlp_ln_t, T, TP, C,  CAP >(ln_sm,    lnq_ref,    "lnq");
-    //     m1.     do_matmul       (   ln_sm,     m1_sm                );  check_stream<__mlp_m1_t, T, TP, CH, CHAP>(m1_sm,    m1_ref,     "m1" );
-    //     ge.     do_gelu         (   m1_sm,     ge_sm                );  check_stream<__mlp_ge_t, T, TP, CH, CHAP>(ge_sm,    ge_ref,     "ge" );
-    //     m2.     do_matmul       (   ge_sm,     m2_sm                );  check_stream<__mlp_m2_t, T, TP, C,  CAP >(m2_sm,    m2_ref,     "m2" );
-    //     this->  stream_merge    (   resi_sm,   m2_sm,      o_stream );
+        this->  stream_copy     (   i_stream,  main_sm,    resi_sm  );  check_stream<__mlp_if_t, T, TP, C,  CAP >(main_sm,  x_ref,      "main");
+        lnq.    do_layernorm    (   main_sm,   ln_sm                );  check_stream<__mlp_ln_t, T, TP, C,  CAP >(ln_sm,    lnq_ref,    "lnq");
+        m1.     do_matmul       (   ln_sm,     m1_sm                );  check_stream<__mlp_m1_t, T, TP, CH, CHAP>(m1_sm,    m1_ref,     "m1" );
+        ge.     do_gelu         (   m1_sm,     ge_sm                );  check_stream<__mlp_ge_t, T, TP, CH, CHAP>(ge_sm,    ge_ref,     "ge" );
+        m2.     do_matmul       (   ge_sm,     m2_sm                );  check_stream<__mlp_m2_t, T, TP, C,  CAP >(m2_sm,    m2_ref,     "m2" );
+        this->  stream_merge    (   resi_sm,   m2_sm,      o_stream );
+    }
 
-    // }
-
-    // #endif
+    #endif
 
 };
 

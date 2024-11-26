@@ -1,13 +1,9 @@
 from pst_syn_process import *
 from pre_syn_process import *
 
-# create the subprojects, if case_names include multiple cases, then multiple subprojects will be created
 # each one corresponds to one cpp file in "case"
-
-
-# case_names = [f"{t}0_{n}bit" for t in ("ATTN", "MLP") for n in range(3, 9)]
-# case_names = [f"{t}{n}" for t in ("ATTN", "MLP") for n in range(12)] + ["HEAD"] + ["PATCH_EMBED"]
-case_names = ["ATTN7", "ATTN8"]
+case_names = [f"{t}0_{n}bit" for t in ("ATTN", "MLP") for n in range(3, 9)]
+case_names = [f"{t}{n}" for t in ("ATTN", "MLP") for n in range(12)] + ["HEAD"] + ["PATCH_EMBED"]
 
 INSTANCE_DIR = os.path.join(ROOT_DIR, "instances")
 

@@ -1,3 +1,8 @@
+"""
+Step1: Generate the case files for each module in ViT model.
+In this step, the statistics are loaded from the binary file "type.npy", and fill in the template of MHA and MLP.
+The generated files will be stored in the "case" folder.
+"""
 from pst_syn_process import *
 from pre_syn_process import *
 import numpy as np
@@ -12,7 +17,6 @@ def to_signed(_s):
     
 def to_string(_i):
     return f"{_i: 3d}"
-    
 
 def generate_attn(type_dict, attn_id):
     """
