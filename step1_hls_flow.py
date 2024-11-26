@@ -1,4 +1,4 @@
-from post_syn_process import *
+from pst_syn_process import *
 from pre_syn_process import *
 
 # create the subprojects, if case_names include multiple cases, then multiple subprojects will be created

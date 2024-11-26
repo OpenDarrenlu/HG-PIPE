@@ -1,5 +1,5 @@
 from pre_syn_process import *
-from post_syn_process import *
+from pst_syn_process import *
 import os
 
 INSTANCE_DIR = os.path.join(ROOT_DIR, "instances")

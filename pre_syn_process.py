@@ -1,3 +1,9 @@
+"""
+This module is for pre HLS-synthesis process, including:
+1. create HLS projects with specific top module
+2. create tcl files for HLS flow (csim, csynth, cosim, export, syn, impl)
+3. run HLS flow in parallel
+"""
 import os
 import shutil
 import threading
@@ -6,7 +12,6 @@ from copy import deepcopy
 import string
 
 from constants import *
-
 
 def create_subprojects(instances_root: str, case_names, overwrite=False):
     # if instances_root does not exist, create it
@@ -43,12 +48,12 @@ def create_tcls(instances_root: str, case_names, do_csim=False, do_csynth=False,
         return "1" if _bool else "0"
 
     for case_name in case_names:
-        # 读取template
+        # read template
         template_path = os.path.join(ROOT_DIR, "template.tcl")
         with open(template_path) as f:
             content = f.read()
 
-        # 替换
+        # substitute
         template = string.Template(content)
         content = template.substitute(
             case_name=case_name,
@@ -81,6 +86,11 @@ def run_instances(instances_root: str, case_names, version="2023.2"):
             vitis_home = os.path.join("C:/programs/xilinx", version.replace('.', '_'), "Vitis", version, "bin")
 
         vitis_hls_cmd = os.path.join(vitis_home, "vitis_hls -f run.tcl")
+        
+        # test if the command exists, if not, print a warning to prompt the user to check the path
+        if not os.path.exists(vitis_hls_cmd):
+            print(f"Warning: {vitis_hls_cmd} does not exist, please check the path in the function 'run_instances' in pre_syn_process.py")
+            exit(1)
 
         os.system(vitis_hls_cmd)
 

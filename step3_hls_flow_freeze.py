@@ -1,4 +1,4 @@
-from post_syn_process import *
+from pst_syn_process import *
 from pre_syn_process import *
 
 case_names = ["ATTN0"]

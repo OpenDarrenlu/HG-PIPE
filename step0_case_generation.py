@@ -1,4 +1,4 @@
-from post_syn_process import *
+from pst_syn_process import *
 from pre_syn_process import *
 import numpy as np
 
@@ -230,7 +230,7 @@ def generate_mlp(type_dict, mlp_id):
 
 
 if __name__ == "__main__":
-    loaded_type_dict = np.load("./binaries/batchsize1/behavior_type_dict.npy", allow_pickle=True).item()
+    loaded_type_dict = np.load("./binaries/statistics/type.npy", allow_pickle=True).item()
     for attn_id in range(12):
         generate_attn(loaded_type_dict, attn_id)
     for mlp_id in range(12):
