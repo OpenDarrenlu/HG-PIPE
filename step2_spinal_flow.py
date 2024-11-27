@@ -17,9 +17,7 @@ backup_log(INSTANCE_DIR, instances_list=instances_list)
 
 to_spinal_blocks(INSTANCE_DIR, ids=list(range(-1, 25)))
 
-# launch_one_spinal_sim(0)
-# launch_one_spinal_sim(1)
-# print(f"Latency is {get_latency(0)}")
-# print(f"Latency is {get_latency(1)}")
-
-# inplace_replace(os.path.join(ROOT_DIR, "instances"), mode="optimal", instances_list=["proj_ATTN0"])
+launch_one_spinal_sim(0)
+launch_one_spinal_sim(1)
+print(f"Latency is {get_latency(0)}")
+print(f"Latency is {get_latency(1)}")

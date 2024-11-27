@@ -21797,7 +21797,7 @@ input clk;
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/PATCH_EMBED/PATCH_EMBED_step2_mac_replace_shift_PATCH_EMBED_INST_bias_arr_19_ROM_1P_BRAM_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/PATCH_EMBED/PATCH_EMBED_step2_mac_replace_shift_PATCH_EMBED_INST_bias_arr_19_ROM_1P_BRAM_1R.dat", rom0);
 end
 
   
@@ -21839,7 +21839,7 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/PATCH_EMBED/PATCH_EMBED_step2_mac_replace_shift_PATCH_EMBED_INST_cls_arr_20_ROM_AUTO_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/PATCH_EMBED/PATCH_EMBED_step2_mac_replace_shift_PATCH_EMBED_INST_cls_arr_20_ROM_AUTO_1R.dat", rom0);
 end
 
   
@@ -21889,7 +21889,7 @@ reg [DataWidth-1:0] q0_t1;
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/PATCH_EMBED/PATCH_EMBED_step2_mac_replace_shift_PATCH_EMBED_INST_weight_arr_18_RAM_1P_URAM_3R2W.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/PATCH_EMBED/PATCH_EMBED_step2_mac_replace_shift_PATCH_EMBED_INST_weight_arr_18_RAM_1P_URAM_3R2W.dat", rom0);
 end
 
  

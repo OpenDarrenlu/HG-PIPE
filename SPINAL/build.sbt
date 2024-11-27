@@ -12,3 +12,4 @@ lazy val root = (project in file("."))
     name := "SPINAL",
     libraryDependencies ++= Seq(spinalCore, spinalLib, spinalIdslPlugin)
   )
+

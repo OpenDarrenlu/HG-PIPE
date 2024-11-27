@@ -2302,7 +2302,7 @@ input clk;
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/HEAD/HEAD_do_layernorm_HEAD_INST_lnq_lnb_ROM_1P_LUTRAM_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/HEAD/HEAD_do_layernorm_HEAD_INST_lnq_lnb_ROM_1P_LUTRAM_1R.dat", rom0);
 end
 
   
@@ -2344,7 +2344,7 @@ input clk;
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/HEAD/HEAD_do_layernorm_HEAD_INST_lnq_lnw_ROM_1P_LUTRAM_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/HEAD/HEAD_do_layernorm_HEAD_INST_lnq_lnw_ROM_1P_LUTRAM_1R.dat", rom0);
 end
 
   
@@ -2386,7 +2386,7 @@ input clk;
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/HEAD/HEAD_do_layernorm_HEAD_INST_lnq_rsqrt_table_ROM_2P_LUTRAM_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/HEAD/HEAD_do_layernorm_HEAD_INST_lnq_rsqrt_table_ROM_2P_LUTRAM_1R.dat", rom0);
 end
 
   
@@ -4872,7 +4872,7 @@ input clk;
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/HEAD/HEAD_matmul_step2_mac_HEAD_INST_matmul_bias_arr_36_ROM_1P_LUTRAM_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/HEAD/HEAD_matmul_step2_mac_HEAD_INST_matmul_bias_arr_36_ROM_1P_LUTRAM_1R.dat", rom0);
 end
 
   
@@ -4914,7 +4914,7 @@ input clk;
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/HEAD/HEAD_matmul_step2_mac_HEAD_INST_matmul_weight_arr_35_ROM_1P_BRAM_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/HEAD/HEAD_matmul_step2_mac_HEAD_INST_matmul_weight_arr_35_ROM_1P_BRAM_1R.dat", rom0);
 end
 
   

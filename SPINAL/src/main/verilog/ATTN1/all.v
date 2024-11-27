@@ -19032,7 +19032,7 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/ATTN1/ATTN1_do_layernorm_attn_inst_lnq_lnb_ROM_AUTO_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/ATTN1/ATTN1_do_layernorm_attn_inst_lnq_lnb_ROM_AUTO_1R.dat", rom0);
 end
 
   
@@ -19074,7 +19074,7 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/ATTN1/ATTN1_do_layernorm_attn_inst_lnq_lnw_ROM_AUTO_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/ATTN1/ATTN1_do_layernorm_attn_inst_lnq_lnw_ROM_AUTO_1R.dat", rom0);
 end
 
   
@@ -19121,7 +19121,7 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/ATTN1/ATTN1_do_layernorm_attn_inst_lnq_rsqrt_table_ROM_AUTO_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/ATTN1/ATTN1_do_layernorm_attn_inst_lnq_rsqrt_table_ROM_AUTO_1R.dat", rom0);
 end
 
   
@@ -24899,7 +24899,7 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/ATTN1/ATTN1_do_quant_1_attn_inst_quant_v_table_ROM_AUTO_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/ATTN1/ATTN1_do_quant_1_attn_inst_quant_v_table_ROM_AUTO_1R.dat", rom0);
 end
 
   
@@ -25428,7 +25428,7 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/ATTN1/ATTN1_do_quant_3_attn_inst_quant_q_table_ROM_AUTO_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/ATTN1/ATTN1_do_quant_3_attn_inst_quant_q_table_ROM_AUTO_1R.dat", rom0);
 end
 
   
@@ -25951,7 +25951,7 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/ATTN1/ATTN1_do_quant_4_attn_inst_quant_k_table_ROM_AUTO_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/ATTN1/ATTN1_do_quant_4_attn_inst_quant_k_table_ROM_AUTO_1R.dat", rom0);
 end
 
   
@@ -26006,7 +26006,7 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/ATTN1/ATTN1_do_quant_attn_inst_quant_a_table_ROM_AUTO_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/ATTN1/ATTN1_do_quant_attn_inst_quant_a_table_ROM_AUTO_1R.dat", rom0);
 end
 
   
@@ -29510,7 +29510,7 @@ input clk;
 (* ram_style = "auto"  *)reg [DataWidth-1:0] ram[0:AddressRange-1];
 
 initial begin
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/ATTN1/ATTN1_do_softmax_12_attn_inst_softmax_qk_head1_buffer_648_RAM_AUTO_1R1W.dat", ram);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/ATTN1/ATTN1_do_softmax_12_attn_inst_softmax_qk_head1_buffer_648_RAM_AUTO_1R1W.dat", ram);
 end 
 
  
@@ -29581,7 +29581,7 @@ input clk;
 (* ram_style = "auto"  *)reg [DataWidth-1:0] ram[0:AddressRange-1];
 
 initial begin
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/ATTN1/ATTN1_do_softmax_12_attn_inst_softmax_qk_head1_exp_score_649_RAM_AUTO_1R1W.dat", ram);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/ATTN1/ATTN1_do_softmax_12_attn_inst_softmax_qk_head1_exp_score_649_RAM_AUTO_1R1W.dat", ram);
 end 
 
  
@@ -29645,7 +29645,7 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/ATTN1/ATTN1_do_softmax_12_attn_inst_softmax_qk_head1_exp_table_ROM_AUTO_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/ATTN1/ATTN1_do_softmax_12_attn_inst_softmax_qk_head1_exp_table_ROM_AUTO_1R.dat", rom0);
 end
 
   
@@ -29700,7 +29700,7 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/ATTN1/ATTN1_do_softmax_12_attn_inst_softmax_qk_head1_recip_table_one_ROM_AUTO_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/ATTN1/ATTN1_do_softmax_12_attn_inst_softmax_qk_head1_recip_table_one_ROM_AUTO_1R.dat", rom0);
 end
 
   
@@ -29755,7 +29755,7 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/ATTN1/ATTN1_do_softmax_12_attn_inst_softmax_qk_head1_recip_table_two_ROM_AUTO_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/ATTN1/ATTN1_do_softmax_12_attn_inst_softmax_qk_head1_recip_table_two_ROM_AUTO_1R.dat", rom0);
 end
 
   
@@ -69865,7 +69865,7 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/ATTN1/ATTN1_matmul_step2_mac_2_attn_inst_matmul_gen_o_bias_arr_647_ROM_AUTO_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/ATTN1/ATTN1_matmul_step2_mac_2_attn_inst_matmul_gen_o_bias_arr_647_ROM_AUTO_1R.dat", rom0);
 end
 
   
@@ -69907,7 +69907,7 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/ATTN1/ATTN1_matmul_step2_mac_2_attn_inst_matmul_gen_o_weight_arr_646_ROM_AUTO_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/ATTN1/ATTN1_matmul_step2_mac_2_attn_inst_matmul_gen_o_weight_arr_646_ROM_AUTO_1R.dat", rom0);
 end
 
   
@@ -80100,7 +80100,7 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/ATTN1/ATTN1_matmul_step2_mac_3_attn_inst_matmul_gen_v_bias_arr_645_ROM_AUTO_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/ATTN1/ATTN1_matmul_step2_mac_3_attn_inst_matmul_gen_v_bias_arr_645_ROM_AUTO_1R.dat", rom0);
 end
 
   
@@ -80142,7 +80142,7 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/ATTN1/ATTN1_matmul_step2_mac_3_attn_inst_matmul_gen_v_weight_arr_644_ROM_AUTO_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/ATTN1/ATTN1_matmul_step2_mac_3_attn_inst_matmul_gen_v_weight_arr_644_ROM_AUTO_1R.dat", rom0);
 end
 
   
@@ -85675,7 +85675,7 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/ATTN1/ATTN1_matmul_step2_mac_50_attn_inst_matmul_gen_q_bias_arr_641_ROM_AUTO_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/ATTN1/ATTN1_matmul_step2_mac_50_attn_inst_matmul_gen_q_bias_arr_641_ROM_AUTO_1R.dat", rom0);
 end
 
   
@@ -85717,7 +85717,7 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/ATTN1/ATTN1_matmul_step2_mac_50_attn_inst_matmul_gen_q_weight_arr_640_ROM_AUTO_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/ATTN1/ATTN1_matmul_step2_mac_50_attn_inst_matmul_gen_q_weight_arr_640_ROM_AUTO_1R.dat", rom0);
 end
 
   
@@ -91250,7 +91250,7 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/ATTN1/ATTN1_matmul_step2_mac_54_attn_inst_matmul_gen_k_bias_arr_643_ROM_AUTO_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/ATTN1/ATTN1_matmul_step2_mac_54_attn_inst_matmul_gen_k_bias_arr_643_ROM_AUTO_1R.dat", rom0);
 end
 
   
@@ -91292,7 +91292,7 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("C:/projects/AAAProjects/PROJ06_PyHLS_ViT/SPINAL/src/main/verilog/ATTN1/ATTN1_matmul_step2_mac_54_attn_inst_matmul_gen_k_weight_arr_642_ROM_AUTO_1R.dat", rom0);
+    $readmemh("C:/projects/AAAProjects/PROJ15_HG_PIPE_GITHUB/HG-PIPE/SPINAL/src/main/verilog/ATTN1/ATTN1_matmul_step2_mac_54_attn_inst_matmul_gen_k_weight_arr_642_ROM_AUTO_1R.dat", rom0);
 end
 
   
