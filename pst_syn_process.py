@@ -270,7 +270,7 @@ def to_spinal_one_block(instances_root: str, block_id, depth_dict=None):
 def to_spinal_all_blocks(instances_root, depth_dicts=None):
     """replace the verilog files in spinal project"""
     for block_id in range(NUM_BLOCKS):
-        to_spinal_one_block(instances_root, block_id, depth_dicts[block_id])
+        to_spinal_one_block(instances_root, block_id, None if depth_dicts is None else depth_dicts[block_id])
 # -------------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------------

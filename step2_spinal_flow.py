@@ -6,18 +6,19 @@ INSTANCE_DIR = os.path.join(ROOT_DIR, "instances")
 
 case_list = [
     "PATCH_EMBED",
-    *[f"ATTN{attn_id}" for attn_id in range(12)],
-    *[f"MLP{mlp_id}" for mlp_id in range(12)],
+    *[f"{layer_id % 2 == 0 and 'ATTN' or 'MLP'}{layer_id//2}" for layer_id in range(24)],
     "HEAD"
 ]
+
 instances_list = ["proj_" + case_name for case_name in case_list]
 
 backup_verilog(INSTANCE_DIR, instances_list=instances_list)
 backup_log(INSTANCE_DIR, instances_list=instances_list)
 
-to_spinal_blocks(INSTANCE_DIR, ids=list(range(-1, 25)))
+print(case_list)
 
-launch_one_spinal_sim(0)
-launch_one_spinal_sim(1)
-print(f"Latency is {get_latency(0)}")
-print(f"Latency is {get_latency(1)}")
+to_spinal_all_blocks(INSTANCE_DIR)
+launch_all_spinal_sim()
+
+for i, case_name in zip(range(-1, 25), case_list):
+    print(f"Latency of {case_name} is {get_latency(i)}")
