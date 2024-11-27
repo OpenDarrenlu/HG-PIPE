@@ -85,11 +85,12 @@ def run_instances(instances_root: str, case_names, version="2023.2"):
         if version=="2020.1":
             vitis_home = os.path.join("C:/programs/xilinx", version.replace('.', '_'), "Vitis", version, "bin")
 
+        vitis_hls_bin = os.path.join(vitis_home, "vitis_hls")
         vitis_hls_cmd = os.path.join(vitis_home, "vitis_hls -f run.tcl")
         
         # test if the command exists, if not, print a warning to prompt the user to check the path
-        if not os.path.exists(vitis_hls_cmd):
-            print(f"Warning: {vitis_hls_cmd} does not exist, please check the path in the function 'run_instances' in pre_syn_process.py")
+        if not os.path.exists(vitis_hls_bin):
+            print(f"Warning: {vitis_hls_bin} does not exist, please check the path in the function 'run_instances' in pre_syn_process.py")
             exit(1)
 
         os.system(vitis_hls_cmd)
