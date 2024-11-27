@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="141c31ec-10d2-4fef-bd2c-2cccde6aefdd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.bsp/sbt.json" beforeDir="false" afterPath="$PROJECT_DIR$/.bsp/sbt.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,18 +44,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "hguq"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hguq&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/hguq/HG-PIPE.git",
-    "accountId": "0c310aac-3f3d-4967-af94-b3e9c6bfc8c7"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/hguq/HG-PIPE.git&quot;,
+    &quot;accountId&quot;: &quot;0c310aac-3f3d-4967-af94-b3e9c6bfc8c7&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
@@ -71,6 +70,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.launch_spinal_server.executor": "Run",
+    "Application.simulate_one_block.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -161,9 +161,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.launch_spinal_server" />
+        <item itemvalue="Application.simulate_one_block" />
         <item itemvalue="Application.gen_network_verilog" />
         <item itemvalue="Application.simulate_blocks_in_parallel" />
-        <item itemvalue="Application.simulate_one_block" />
         <item itemvalue="Application.simulate_controller" />
       </list>
     </recent_temporary>
@@ -200,6 +200,7 @@
       <workItem from="1718011374832" duration="25000" />
       <workItem from="1721219318927" duration="2003000" />
       <workItem from="1732690782831" duration="1404000" />
+      <workItem from="1732698141021" duration="3998000" />
     </task>
     <servers />
   </component>
