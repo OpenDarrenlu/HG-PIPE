@@ -21,4 +21,4 @@ create_tcls(INSTANCE_DIR, case_names=case_names, do_csim=True, do_csynth=True, d
 # create_tcls(INSTANCE_DIR, case_names=case_names, do_csim=True, do_csynth=True, do_cosim=True, do_impl=True, phys_opt="all")
 
 # launch the tcl files
-run_instances(INSTANCE_DIR, case_names=case_names, version="2023.2")
+run_instances(INSTANCE_DIR, case_names=case_names, version="2023.2", max_threads=16)

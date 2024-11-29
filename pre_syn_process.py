@@ -72,7 +72,7 @@ def create_tcls(instances_root: str, case_names, do_csim=False, do_csynth=False,
             f.write(content)
 
 
-def run_instances(instances_root: str, case_names, version="2023.2"):
+def run_instances(instances_root: str, case_names, version="2023.2", max_threads=16):
     def thread_func(case_name):
         start_time = time()
         proj_name = "proj_" + case_name
@@ -98,7 +98,6 @@ def run_instances(instances_root: str, case_names, version="2023.2"):
         end_time = time()
         print(f"{case_name} is done, time: {end_time - start_time}")
 
-    max_threads = 16
     case_queue = deepcopy(case_names)
     thread_pool = []
 
