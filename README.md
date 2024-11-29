@@ -209,14 +209,13 @@ For memory mapping:
 2. Add a new memory map via "Addressing and Memory Wizard."
 ![image](assets/add_mmap.png)
 3. Assign address blocks (e.g., reg0).
-![image](assets/base_bd.png)
 
 Finally, click "Review and Package," then "Re-Package IP," and save.
 
 To integrate the IP into a Block Design:
 1. Use `VCK190-bd-base.tcl` to create a base Block Design.
+![image](assets/base_bd.png)
 2. Add the packaged IP, reconfigure the DMA connections and bitwidths, and connect the accelerator to the design.
-
 ![image](assets/bd.png)
 
 Assign addresses in the Address Editor, then generate the PDI file. Use `bootgen` to create the BOOT.BIN file. For optimal performance (425MHz), set "Flow_PerfOptimized_high" for synthesis and "Flow_ExploreWithRemap" for implementation.
