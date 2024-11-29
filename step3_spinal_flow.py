@@ -21,4 +21,4 @@ to_spinal_all_blocks(INSTANCE_DIR)
 launch_all_spinal_sim()
 
 for i, case_name in zip(range(-1, 25), case_list):
-    print(f"Latency of {case_name} is {get_latency(i)}")
+    print(f"Latency of {case_name:15} is {get_latency(i)}")

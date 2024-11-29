@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.7.1    git head : 0444bb76ab1d6e19f0ec46bc03c4769776deb7d5
 // Component : BlockSequence
-// Git hash  : 983c72533c5e25cbb0627523d4f176cef1ecd0e6
+// Git hash  : e0f73c5cfffe40d7db8fe4e35ffe2a0a1c579e5c
 
 `timescale 1ns/1ps
 
@@ -24,13 +24,13 @@ module BlockSequence (
   input               axilite_rready,
   output     [31:0]   axilite_rdata,
   output     [1:0]    axilite_rresp,
-  input               i_stream_valid,
-  output              i_stream_ready,
-  input      [31:0]   i_stream_payload_data,
-  output              o_stream_valid,
-  input               o_stream_ready,
-  output     [31:0]   o_stream_payload_data,
-  output              o_stream_payload_last,
+  input               i_stream_tvalid,
+  output              i_stream_tready,
+  input      [31:0]   i_stream_tdata,
+  output              o_stream_tvalid,
+  input               o_stream_tready,
+  output     [31:0]   o_stream_tdata,
+  output              o_stream_tlast,
   input               resetn,
   input               clk
 );
@@ -410,7 +410,7 @@ module BlockSequence (
     .i_stream_ready        (controller_1_i_stream_ready             ), //o
     .i_stream_payload_data (block_52_io_o_stream_payload_data[31:0] ), //i
     .o_stream_valid        (controller_1_o_stream_valid             ), //o
-    .o_stream_ready        (o_stream_ready                          ), //i
+    .o_stream_ready        (o_stream_tready                         ), //i
     .o_stream_payload_data (controller_1_o_stream_payload_data[31:0]), //o
     .o_stream_payload_last (controller_1_o_stream_payload_last      ), //o
     .signals_N             (controller_1_signals_N[19:0]            ), //o
@@ -425,9 +425,9 @@ module BlockSequence (
     .io_ap_chain_ap_idle      (block_27_io_ap_chain_ap_idle           ), //o
     .io_ap_chain_ap_ready     (block_27_io_ap_chain_ap_ready          ), //o
     .io_ap_chain_ap_done      (block_27_io_ap_chain_ap_done           ), //o
-    .io_i_stream_valid        (i_stream_valid                         ), //i
+    .io_i_stream_valid        (i_stream_tvalid                        ), //i
     .io_i_stream_ready        (block_27_io_i_stream_ready             ), //o
-    .io_i_stream_payload_data (i_stream_payload_data[31:0]            ), //i
+    .io_i_stream_payload_data (i_stream_tdata[31:0]                   ), //i
     .io_o_stream_valid        (block_27_io_o_stream_valid             ), //o
     .io_o_stream_ready        (fifo_25_io_i_stream_ready              ), //i
     .io_o_stream_payload_data (block_27_io_o_stream_payload_data[31:0]), //o
@@ -1405,10 +1405,10 @@ module BlockSequence (
   assign axilite_rvalid = controller_1_axilite_rvalid;
   assign axilite_rdata = controller_1_axilite_rdata;
   assign axilite_rresp = controller_1_axilite_rresp;
-  assign i_stream_ready = block_27_io_i_stream_ready;
-  assign o_stream_valid = controller_1_o_stream_valid;
-  assign o_stream_payload_data = controller_1_o_stream_payload_data;
-  assign o_stream_payload_last = controller_1_o_stream_payload_last;
+  assign i_stream_tready = block_27_io_i_stream_ready;
+  assign o_stream_tvalid = controller_1_o_stream_valid;
+  assign o_stream_tdata = controller_1_o_stream_payload_data;
+  assign o_stream_tlast = controller_1_o_stream_payload_last;
 
 endmodule
 

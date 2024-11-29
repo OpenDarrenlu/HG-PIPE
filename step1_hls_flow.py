@@ -10,8 +10,6 @@ from pre_syn_process import *
 # run HLS flow on all cases: PatchEmbed, Attention*12, MLP*12, Head
 case_names = [f"{t}{n}" for t in ("ATTN", "MLP") for n in range(12)] + ["HEAD"] + ["PATCH_EMBED"]
 
-case_names = ["MLP1", "MLP2", "MLP5", "MLP6"]
-
 INSTANCE_DIR = os.path.join(ROOT_DIR, "instances")
 
 create_subprojects(INSTANCE_DIR, case_names=case_names, overwrite=True)

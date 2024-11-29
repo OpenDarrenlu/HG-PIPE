@@ -234,7 +234,7 @@ def generate_mlp(type_dict, mlp_id):
 
 
 if __name__ == "__main__":
-    loaded_type_dict = np.load("./binaries/statistics/type.npy", allow_pickle=True).item()
+    loaded_type_dict = np.load("./statistics/type.npy", allow_pickle=True).item()
     for attn_id in range(12):
         generate_attn(loaded_type_dict, attn_id)
     for mlp_id in range(12):

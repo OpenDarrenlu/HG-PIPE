@@ -3,6 +3,7 @@ package block
 import ctrl.{Controller, Manager, ctrl_cfg}
 import spinal.core._
 import spinal.lib._
+import spinal.lib.bus.amba4.axi.Axi4SpecRenamer
 import spinal.lib.bus.amba4.axilite.{AxiLite4, AxiLite4SpecRenamer}
 import spinal.lib.bus.amba4.axis.Axi4Stream._
 import spinal.lib.bus.amba4.axis._
@@ -24,6 +25,8 @@ class BlockSequence(StartID: Int, EndID: Int) extends Component {
 
   noIoPrefix()
   AxiLite4SpecRenamer(io.axilite)
+  Axi4SpecRenamer(io.i_stream)
+  Axi4SpecRenamer(io.o_stream)
 
   val controller: Controller = new Controller(EndID)
   controller.io.axilite <> io.axilite
