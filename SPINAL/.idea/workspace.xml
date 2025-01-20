@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="141c31ec-10d2-4fef-bd2c-2cccde6aefdd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlockSequence.v" beforeDir="false" afterPath="$PROJECT_DIR$/BlockSequence.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlockSequence_bb.v" beforeDir="false" afterPath="$PROJECT_DIR$/BlockSequence_bb.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/block/BlockSequence.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/BlockSequence.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vivado/BlockSequence_bb_replaced.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vivado/BlockSequence_replaced.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../binaries/statistics/print_result.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../binaries/statistics/print_statistics.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../statistics/print_statistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/../statistics/print_statistics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step0_case_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/../step0_case_generation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step1_hls_flow.py" beforeDir="false" afterPath="$PROJECT_DIR$/../step1_hls_flow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step3_spinal_flow.py" beforeDir="false" afterPath="$PROJECT_DIR$/../step3_spinal_flow.py" afterDir="false" />
-    </list>
+    <list default="true" id="141c31ec-10d2-4fef-bd2c-2cccde6aefdd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -220,7 +206,7 @@
       <workItem from="1718011374832" duration="25000" />
       <workItem from="1721219318927" duration="2003000" />
       <workItem from="1732690782831" duration="1404000" />
-      <workItem from="1732698141021" duration="16265000" />
+      <workItem from="1732698141021" duration="18789000" />
     </task>
     <servers />
   </component>
