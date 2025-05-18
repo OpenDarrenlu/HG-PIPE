@@ -80,10 +80,10 @@ def run_instances(instances_root: str, case_names, version="2023.2", max_threads
         os.chdir(case_dir)
         print(f"{case_name} is running")
 
-        vitis_home = os.path.join("C:/programs/xilinx", version.replace('.', '_'), "Vitis_HLS", version, "bin")
+        vitis_home = os.path.join("F:/Xilinx", "Vitis_HLS", version, "bin") #  version.replace('.', '_'),
 
         if version=="2020.1":
-            vitis_home = os.path.join("C:/programs/xilinx", version.replace('.', '_'), "Vitis", version, "bin")
+            vitis_home = os.path.join("F:/Xilinx", "Vitis", version, "bin") #  version.replace('.', '_'),
 
         vitis_hls_bin = os.path.join(vitis_home, "vitis_hls")
         vitis_hls_cmd = os.path.join(vitis_home, "vitis_hls -f run.tcl")

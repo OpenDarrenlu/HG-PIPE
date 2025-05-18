@@ -230,7 +230,7 @@ int main(){
         }
     }
 
-    printf("i_stream size = %d\n", i_stream.size());
+    // printf("i_stream size = %d\n", i_stream.size()); // 2020.2 not support "size"
 
     // call top
     for(int test_round=0; test_round<TEST_ROUND; test_round++){
@@ -254,7 +254,7 @@ int main(){
         }
     }
 
-    printf("o_stream size = %d\n", o_stream.size());
+    // printf("o_stream size = %d\n", o_stream.size());  // 2020.2 not support "size"
 
     // compare
     bool flag = true;
