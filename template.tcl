@@ -28,11 +28,12 @@ add_files -tb   case/${case_name}.cpp
 open_solution "solution"
 # set_part xcvc1902-vsva2197-2MP-e-S 
 # use ZCU102
-set_part xczu9eg-ffvb1156-2-e
+# set_part xczu9eg-ffvb1156-2-e
+set_part xczu5ev-sfvc784-1-e
 set_top top
 create_clock -period 2.5
 config_export -format ip_catalog -rtl verilog  -vivado_phys_opt ${phys_opt}
-# -vivado_clock 2.5 The 'config_export -vivado_clock' hidden command is not supported.
+# -vivado_clock 2.5 The 'config_export -vivado_clock' hidden command is not supported in 2020.2.
 
 if { $$do_csim == 1 } {
     csim_design -ldflags {-Wl,--stack,10485760}

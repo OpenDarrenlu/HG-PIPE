@@ -23,8 +23,9 @@ from constants import *
 def get_resource_table(instances_root: str, instances_list=[]):
     if not instances_list:
         instances_list = os.listdir(instances_root)
+        print(instances_list)
 
-    resource_types = ["SLICE", "LUT", "FF", "DSP", "BRAM", "URAM", "LATCH", "SRL"]
+    resource_types = ["CLB", "LUT", "FF", "DSP", "BRAM", "URAM", "SRL"]
     result_dict = {}
     for instance in instances_list:
         log_path = os.path.join(instances_root, instance, "vitis_hls.log")
@@ -48,7 +49,7 @@ def get_resource_table(instances_root: str, instances_list=[]):
 
 # -------------------------------------------------------------------------------------
 def print_resource_table(instances_root: str):
-    resource_types = ["SLICE", "LUT", "FF", "DSP", "BRAM", "URAM", "LATCH", "SRL"]
+    resource_types = ["CLB", "LUT", "FF", "DSP", "BRAM", "URAM", "SRL"]
     result_dict = get_resource_table(instances_root)
     print()
     print(f"{'instance':25s}{''.join([f'{resource_type:10s}' for resource_type in resource_types])}\n")
