@@ -1,0 +1,3 @@
+[submodule "third_party/deit"]
+	path = third_party/deit
+	url = https://github.com/facebookresearch/deit.git
