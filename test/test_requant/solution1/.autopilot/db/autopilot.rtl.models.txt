@@ -1,5 +1,0 @@
-quant_top_fmul_32ns_32ns_32_4_max_dsp_1
-quant_top_sitofp_32ns_32_4_no_dsp_1
-quant_top_quant_module_table
-do_quant
-quant_top
