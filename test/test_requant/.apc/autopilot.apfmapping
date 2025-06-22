@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="common.h" path="F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\test\common.h"/>
+    <originFiles name="requant.h" path="F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\test\requant.h"/>
+    <originFiles name="utils.h" path="F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\test\utils.h"/>
+    <originFiles name="quant_top.cpp" path="F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\test\quant_top.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="test_requant.cpp" path="F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\test\test_requant.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,26 @@
+
+
+================================================================
+== Synthesis Summary Report of 'gelu_top'
+================================================================
++ General Information: 
+    * Date:           Sun Jun 22 19:53:05 2025
+    * Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+    * Project:        test_gelu
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu5ev-sfvc784-1-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------+------+-------+---------+-----------+----------+---------+------+----------+------+----+----------+-----------+-----+
+    |        Modules       | Issue|       | Latency |  Latency  | Iteration|         | Trip |          |      |    |          |           |     |
+    |        & Loops       | Type | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM | DSP|    FF    |    LUT    | URAM|
+    +----------------------+------+-------+---------+-----------+----------+---------+------+----------+------+----+----------+-----------+-----+
+    |+ gelu_top            |     -|  -5.55|     9510|  9.510e+04|         -|     9511|     -|        no|     -|   -|  48 (~0%)|  148 (~0%)|    -|
+    | + grp_do_gelu_fu_40  |     -|  -5.55|     9509|  9.509e+04|         -|     9509|     -|        no|     -|   -|  29 (~0%)|  108 (~0%)|    -|
+    |  o TT_LOOP_CT_LOOP   |     -|  -7.30|     9506|  9.506e+04|         2|        1|  9506|       yes|     -|   -|         -|          -|    -|
+    +----------------------+------+-------+---------+-----------+----------+---------+------+----------+------+----+----------+-----------+-----+
+

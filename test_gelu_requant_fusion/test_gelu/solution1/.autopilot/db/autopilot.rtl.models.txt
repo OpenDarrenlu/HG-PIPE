@@ -1,0 +1,3 @@
+gelu_top_gelu_inst_table
+do_gelu
+gelu_top

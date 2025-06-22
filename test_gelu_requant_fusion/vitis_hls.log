@@ -1,0 +1,111 @@
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running 'F:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'LUtin' on host 'darrenlu' (Windows NT_amd64 version 6.2) on Sun Jun 22 19:52:56 +0800 2025
+INFO: [HLS 200-10] In directory 'F:/master_MLsys/USTC_spring/EDA/Project/HG-PIPE/test_gelu_requant_fusion'
+Sourcing Tcl script 'F:/master_MLsys/USTC_spring/EDA/Project/HG-PIPE/test_gelu_requant_fusion/test_gelu/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project test_gelu 
+INFO: [HLS 200-10] Opening project 'F:/master_MLsys/USTC_spring/EDA/Project/HG-PIPE/test_gelu_requant_fusion/test_gelu'.
+INFO: [HLS 200-1510] Running: set_top gelu_top 
+INFO: [HLS 200-1510] Running: add_files common.h 
+INFO: [HLS 200-10] Adding design file 'common.h' to the project
+INFO: [HLS 200-1510] Running: add_files gelu.h 
+INFO: [HLS 200-10] Adding design file 'gelu.h' to the project
+INFO: [HLS 200-1510] Running: add_files gelu_top.cpp 
+INFO: [HLS 200-10] Adding design file 'gelu_top.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files utils.h 
+INFO: [HLS 200-10] Adding design file 'utils.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb test_gelu.cpp 
+INFO: [HLS 200-10] Adding test bench file 'test_gelu.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'F:/master_MLsys/USTC_spring/EDA/Project/HG-PIPE/test_gelu_requant_fusion/test_gelu/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu5ev-sfvc784-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xczu5ev-sfvc784-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.025 seconds; current allocated memory: 869.676 MB.
+INFO: [HLS 200-10] Analyzing design file 'gelu_top.cpp' ... 
+WARNING: [HLS 207-5301] unused parameter 'table_init': ./gelu.h:36:19
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.025 seconds; current allocated memory: 91.857 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::vector<signed char, 4ul>, 0>::read(hls::vector<signed char, 4ul>&)' into 'hls::stream<hls::vector<signed char, 4ul>, 0>::read()' (F:/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::vector<signed char, 4ul>::pragma() const' into 'hls::vector<signed char, 4ul>::operator[](unsigned long)' (F:/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot\hls_vector.h:92:5)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::vector<signed char, 4ul>, 0>::read()' into 'GeLU<signed char, int, signed char, 196, 2, 194, 2, 64>::do_gelu(hls::stream<hls::vector<signed char, 4ul>, 0>&, hls::stream<hls::vector<signed char, 4ul>, 0>&) const' (./gelu.h:59:46)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::vector<signed char, 4ul>, 0>::write(hls::vector<signed char, 4ul> const&)' into 'GeLU<signed char, int, signed char, 196, 2, 194, 2, 64>::do_gelu(hls::stream<hls::vector<signed char, 4ul>, 0>&, hls::stream<hls::vector<signed char, 4ul>, 0>&) const' (./gelu.h:74:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_63_1' (./gelu.h:63:34) in function 'GeLU<signed char, int, signed char, 196, 2, 194, 2, 64>::do_gelu' completely with a factor of 2 (./gelu.h:63:34)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_65_2' (./gelu.h:65:19) in function 'GeLU<signed char, int, signed char, 196, 2, 194, 2, 64>::do_gelu' completely with a factor of 2 (./gelu.h:65:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_65_2' (./gelu.h:65:19) in function 'GeLU<signed char, int, signed char, 196, 2, 194, 2, 64>::do_gelu' completely with a factor of 2 (./gelu.h:65:19)
+INFO: [HLS 214-178] Inlining function 'std::__array_traits<signed char, 4ul>::_S_ref(signed char const (&) [4], unsigned long)' into 'std::array<signed char, 4ul>::operator[](unsigned long)' (F:/Xilinx/Vitis_HLS/2020.2/tps/mingw/6.2.0/win64.o/nt\lib\gcc\x86_64-w64-mingw32\6.2.0\include\c++\array:182:0)
+INFO: [HLS 214-178] Inlining function 'std::array<signed char, 4ul>::operator[](unsigned long)' into 'hls::vector<signed char, 4ul>::operator[](unsigned long)' (F:/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot\hls_vector.h:91:0)
+INFO: [HLS 214-178] Inlining function 'hls::vector<signed char, 4ul>::operator[](unsigned long)' into 'GeLU<signed char, int, signed char, 196, 2, 194, 2, 64>::do_gelu(hls::stream<hls::vector<signed char, 4ul>, 0>&, hls::stream<hls::vector<signed char, 4ul>, 0>&) const' (./gelu.h:50:0)
+INFO: [HLS 214-178] Inlining function 'int clamp<int, int>(int, int, int)' into 'GeLU<signed char, int, signed char, 196, 2, 194, 2, 64>::do_gelu(hls::stream<hls::vector<signed char, 4ul>, 0>&, hls::stream<hls::vector<signed char, 4ul>, 0>&) const' (./gelu.h:50:0)
+INFO: [HLS 214-178] Inlining function 'GeLU<signed char, int, signed char, 196, 2, 194, 2, 64>::GeLU(int const*, int const*)' into 'gelu_top(hls::stream<hls::vector<signed char, 4ul>, 0>&, hls::stream<hls::vector<signed char, 4ul>, 0>&, int const*, int const*)' (gelu_top.cpp:17:0)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i32.s_class.hls::vectors' into 'GeLU<signed char, int, signed char, 196, 2, 194, 2, 64>::do_gelu(hls::stream<hls::vector<signed char, 4ul>, 0>&, hls::stream<hls::vector<signed char, 4ul>, 0>&) const (.1)' (F:/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.456 seconds; current allocated memory: 93.080 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.012 seconds; current allocated memory: 93.081 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.041 seconds; current allocated memory: 95.080 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.059 seconds; current allocated memory: 95.421 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.145 seconds; current allocated memory: 116.868 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'TT_LOOP' (./gelu.h:54:19) in function 'GeLU<signed char, int, signed char, 196, 2, 194, 2, 64>::do_gelu'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 119.068 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'gelu_top' ...
+WARNING: [SYN 201-303] Incompatible memory assignment of 'ROM_2P_LUTRAM' (gelu_top.cpp:19) on 'gelu_inst_table', which is not a const array.
+WARNING: [SYN 201-107] Renaming port name 'gelu_top/table' to 'gelu_top/table_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'do_gelu' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'TT_LOOP_CT_LOOP'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'TT_LOOP_CT_LOOP'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.046 seconds; current allocated memory: 119.273 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.067 seconds; current allocated memory: 119.396 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gelu_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.048 seconds; current allocated memory: 119.456 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.028 seconds; current allocated memory: 119.558 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'do_gelu' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'do_gelu'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.034 seconds; current allocated memory: 119.808 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gelu_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'gelu_top/i_stream_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gelu_top/o_stream_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gelu_top/scalars' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gelu_top/table_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'gelu_top' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'gelu_top/scalars' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'gelu_top/table_r' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gelu_top'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 120.326 MB.
+INFO: [RTMG 210-279] Implementing memory 'gelu_top_gelu_inst_table_rom' using distributed ROMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.887 seconds; current allocated memory: 126.859 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for gelu_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for gelu_top.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 570.78 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 9.127 seconds; current allocated memory: 126.975 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 10.376 seconds; peak allocated memory: 869.676 MB.
