@@ -1,6 +1,7 @@
 # HG-PIPE
 
 <!-- ![Build Status](https://img.shields.io/badge/build-passing-brightgreen) -->
+
 [English](README.md) | [中文](README.zh-CN.md)
 
 ![License](https://img.shields.io/badge/license-MIT-blue)
@@ -11,19 +12,23 @@
 ---
 
 ## 加速器特性
+
 <!-- 添加一个表格-->
+
 | LUTs | DSPs | BRAMs | Frequency | FPS(ImageNet@224x224) | TOPs | GOPs/W | Accuracy |
-|:----:|:----:|:-----:|:---------:|:---------------------:|:----:|:------:|:--------:|
-|  669k|  312 | 1006.5| 425MHz    |7118                   | 17.8 |  381.0 |  71.05%  |
+| :--: | :--: | :----: | :-------: | :-------------------: | :--: | :----: | :------: |
+| 669k | 312 | 1006.5 |  425MHz  |         7118         | 17.8 | 381.0 |  71.05%  |
 
 ---
 
 ## 环境需求
+
 - Vivado HLS 2020.1 或更新版本（推荐使用2023.2以获取更快的编译速度）
 - Python 3
 - IDEA + Scala（2.11.12） + Spinal（1.7.1）+ Verilator（4.228）
 
 ## 文件结构
+
 该项目包含几个组件：(1) HLS设计文件，（2）用于运行Vitis HLS的Python脚本，（3）用于加速仿真和打包导出的SpinalHDL代码，（4）用于在FPGA上测试的jupyter notebook脚本。
 
 ```text
@@ -57,12 +62,12 @@ HG-PIPE/
 └── template.tcl            # 用于生成各个HLS项目的模板文件
 ```
 
-
-
 ## 快速开始
+
 该项目主要包含6个步骤。如果你想跳过加速器的生成步骤，直接上板，可以从step4开始。
 
 ### Step0: Case Generation
+
 在case目录下包含了ATTN模块和MLP模块的模板文件，通过运行step0_case_generation.py脚本，读取statistics目录下的统计信息，生成对应的cpp文件。在运行脚本前，请先解压case/refs.7z文件，其中包含了用于单元测试的golden data和神经网络权重数据。
 
 ```bash
@@ -70,6 +75,7 @@ python step0_case_generation.py
 ```
 
 ### Step1: HLS Simulation, Compilation, and Synthesis
+
 通过运行step1_hls.py脚本，自动创建instances目录，并在其中生成各个层的Vitis HLS项目。
 
 ```bash
@@ -79,6 +85,7 @@ python step1_hls_flow.py
 通过修改该脚本，你可以指定仅运行其中某些模块的流程，或者仅运行部分流程（如仅运行仿真）。请注意如果电脑内存不足64GB，请调低max_threads参数。
 
 ### Step2: Print Resource Usage
+
 通过运行step2_print_resource.py脚本，可以打印出各个层的资源占用情况。
 
 ```bash
@@ -86,6 +93,7 @@ python step2_print_resource.py
 ```
 
 运行结果：
+
 ```bash
 instance                 SLICE     LUT       FF        DSP       BRAM      URAM      LATCH     SRL
 
@@ -102,15 +110,42 @@ proj_PATCH_EMBED         0         8966      10031     428       178       0    
 ```
 
 ### Step3: SpinalHDL Simulation and Packaging
+
 通过使用SpinalHDL，我们提供了一个使用Verilator仿真的平台，以提供整个加速器的完整仿真，提升仿真速度。
 为了使用SpinalHLD，需要使用Jetbrains的IDEA环境并且安装Scala插件。
 请遵循SpinalHDL的官方文档安装环境兼容的Verilator ([https://spinalhdl.github.io/SpinalDoc-RTD/SpinalHDL/Getting%20Started/](https://spinalhdl.github.io/SpinalDoc-RTD/v1.3.1/SpinalHDL/Simulation/install.html))。
 在IDEA中打开SPINAL目录，加载build.sbt文件以自动下载SpinalHDL的依赖项。
 
+以上过程可以在wsl中安装环境并同样复现
+
+```
+# 安装Java 8 或 11（推荐 OpenJDK 11）
+sudo apt install openjdk-11-jdk
+
+# 安装Scala
+sudo apt install scala
+
+# 安装sbt（Scala构建工具）
+echo "deb https://repo.scala-sbt.org/scalasbt/debian all main" | sudo tee /etc/apt/sources.list.d/sbt.list
+curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x99E82A75642AC823" | sudo apt-key add
+sudo apt update
+sudo apt install sbt
+
+# 安装Verilator
+sudo apt install verilator
+
+```
+
 本项目中的Verilator仿真是使用Client-Server模式，使用Scala启动一个仿真server，用python通过socket将仿真参数传递给server，server返回仿真结果，因此在仿真前需要先启动server。
 
 ```text
 Run "launch_spinal_server" function in src/test/scala/server/launch_spinal_server.scala
+```
+
+wsl替代方案：
+
+```
+sbt "test:runMain server.launch_spinal_server"
 ```
 
 运行step3_spinal_flow.py脚本，将生成的各个项目的verilog代码复制到SPINAL目录下，并且并行运行所有层的仿真。
@@ -134,11 +169,19 @@ Latency of HEAD            is 48001
 ```
 
 本项目也提供了整个加速器的完整仿真：
+
 ```shell
 Run "simulate_whole_network" function in src/test/scala/network/simulate_whole_network.scala
 ```
 
+wsl替代方案：
+
+```
+sbt "test:runMain network.simulate_whole_network"
+```
+
 这将会消耗较长的时间，并产生下面的输出：
+
 ```text
 Got 0
 Got 1
@@ -152,6 +195,12 @@ First out to Last out:         47811
 First in to first out:         768773
 Last in to last out:           760701
 First in to Last out:          816584
+// my results
+First in to Last in:           111131
+First out to Last out:         95616
+First in to first out:         124301
+Last in to last out:           108786
+First in to Last out:          219917
 ***************************************************
 ......
 ***************************************************
@@ -165,6 +214,16 @@ Latency of i begin:            57625
 Latency of i close:            57625
 Latency of o begin:            57625
 Latency of o close:            57625
+// my results
+First in to Last in:           112902
+First out to Last out:         95616
+First in to first out:         126074
+Last in to last out:           108788
+First in to Last out:          221690
+Latency of i begin:            112907
+Latency of i close:            112907
+Latency of o begin:            112907
+Latency of o close:            112907
 ***************************************************
 [Done] Simulation done in 590469.695 ms
 *** Total time is 889.5037027 seconds ***
@@ -172,13 +231,17 @@ Latency of o close:            57625
 ```
 
 ### Step4: IP Packaging and Vivado Implementation
+
 为了将产生的各层设计文件打包到单个模块，请在IDEA环境中运行对应的代码：
+
 ```text
 Run "generate_whole_network_verilog" function in src/main/scala/network/generate_whole_network_verilog.scala
 ```
+
 这会产生BlockSequence.v和BlockSequence_bb.v两个文件，分别是加速器的顶层和打包的HLS模块。
 
 接下来直接运行SPINAl目录下的to_vivado.py脚本，这会生成一个"vivado"文件夹，其中包含了打包IP所需的所有设计文件，包含verilog和初始化存储器文件：
+
 ```shell
 cd SPINAL
 python to_vivado.py
@@ -191,7 +254,7 @@ python to_vivado.py
 ![image](assets/add_source.png)
 ![image](assets/add_all_files.png)
 
-接下来的一部是自动推导接口。在"Packaging Steps"窗口中，点击"Ports and Interfaces"添加接口。选中所有"axilite"接口，然后选择"Auto Infer Interface"，然后选择"aximm_rtl"，点击OK。
+接下来的一步是自动推导接口。在"Packaging Steps"窗口中，点击"Ports and Interfaces"添加接口。选中所有"axilite"接口，然后选择"Auto Infer Interface"，然后选择"aximm_rtl"，点击OK。
 
 ![image](assets/auto_infer_axilite.png)
 ![image](assets/aximm_rtl.png)
@@ -229,6 +292,7 @@ python to_vivado.py
 我们的设计不使用任何vendor-specific IP，因此可以支持不同的FPGA平台。我们提供了Jupyter Notebook，位于"notebooks"目录下，用于在板上测试加速器。请将该notebook和参考数据文件(refs)上传至测试版，并按照其中步骤进行。我们实现了一套类似于Pynq的机制用于在不支持Pynq的VCK190平台上控制各类硬件。在运行前，请检查notebook内容，保证正确的硬件地址（主要是加速器的硬件地址）。
 
 ## 引用
+
 欢迎您引用我们ICCAD 2024的文章。
 
 ```bibtex

@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Jun 20 12:16:41 2025
+# Process ID: 27140
+# Current directory: F:/master_MLsys/USTC_spring/EDA/Project/HG-PIPE/SPINAL/vivado/Proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28720 F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\vivado\Proj\edit_HG_PIPE_v1_0.xpr
+# Log file: F:/master_MLsys/USTC_spring/EDA/Project/HG-PIPE/SPINAL/vivado/Proj/vivado.log
+# Journal file: F:/master_MLsys/USTC_spring/EDA/Project/HG-PIPE/SPINAL/vivado/Proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/master_MLsys/USTC_spring/EDA/Project/HG-PIPE/SPINAL/vivado/Proj/edit_HG_PIPE_v1_0.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'F:/master_MLsys/USTC_spring/EDA/Project/HG-PIPE/SPINAL/vivado/Proj/edit_HG_PIPE_v1_0.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/master_MLsys/USTC_spring/EDA/Project/HG-PIPE/SPINAL/vivado/Proj/HG_PIPE_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/master_MLsys/USTC_spring/EDA/Project/HG-PIPE/instances'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 1206.801 ; gain = 0.000
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 20 12:17:19 2025...

@@ -31,15 +31,15 @@ class FCBlackBox extends BlackBox {
     val s_axi_ctrl_BRESP: Bits = out Bits (2 bits)
 
     // axi stream interface
-    val i_stream_TDATA: Bits = in Bits (fc_cfg.DATAWIDTH_I bits)
-    val o_stream_TDATA: Bits = out Bits (fc_cfg.DATAWIDTH_O bits)
-    val o_stream_TKEEP: Bits = out Bits (fc_cfg.DATAWIDTH_O / 8 bits)
-    val o_stream_TSTRB: Bits = out Bits (fc_cfg.DATAWIDTH_O / 8 bits)
-    val o_stream_TLAST: Bool = out Bool()
-    val i_stream_TVALID: Bool = in Bool()
-    val i_stream_TREADY: Bool = out Bool()
-    val o_stream_TVALID: Bool = out Bool()
-    val o_stream_TREADY: Bool = in Bool()
+    val i_stream_V_TDATA: Bits = in Bits (fc_cfg.DATAWIDTH_I bits)
+    val o_stream_V_TDATA: Bits = out Bits (fc_cfg.DATAWIDTH_O bits)
+    val o_stream_V_TKEEP: Bits = out Bits (fc_cfg.DATAWIDTH_O / 8 bits)
+    val o_stream_V_TSTRB: Bits = out Bits (fc_cfg.DATAWIDTH_O / 8 bits)
+    val o_stream_V_TLAST: Bool = out Bool()
+    val i_stream_V_TVALID: Bool = in Bool()
+    val i_stream_V_TREADY: Bool = out Bool()
+    val o_stream_V_TVALID: Bool = out Bool()
+    val o_stream_V_TREADY: Bool = in Bool()
 
     // ap_hs interface
     // since the weight must be configured through axilite, don't use ap_hs
@@ -105,14 +105,14 @@ class FC extends Component {
   io.axilite.b.resp <> linear.io.s_axi_ctrl_BRESP
 
   // axi stream
-  io.i_stream.valid <> linear.io.i_stream_TVALID
-  io.i_stream.ready <> linear.io.i_stream_TREADY
-  io.i_stream.payload.data <> linear.io.i_stream_TDATA
+  io.i_stream.valid <> linear.io.i_stream_V_TVALID
+  io.i_stream.ready <> linear.io.i_stream_V_TREADY
+  io.i_stream.payload.data <> linear.io.i_stream_V_TDATA
 
-  io.o_stream.valid <> linear.io.o_stream_TVALID
-  io.o_stream.ready <> linear.io.o_stream_TREADY
-  io.o_stream.payload.data <> linear.io.o_stream_TDATA
-  io.o_stream.payload.last <> linear.io.o_stream_TLAST
-  //  io.o_stream.payload.keep <> linear.io.o_stream_TKEEP // not used
-  //  io.o_stream.payload.strb <> linear.io.o_stream_TSTRB // not used
+  io.o_stream.valid <> linear.io.o_stream_V_TVALID
+  io.o_stream.ready <> linear.io.o_stream_V_TREADY
+  io.o_stream.payload.data <> linear.io.o_stream_V_TDATA
+  io.o_stream.payload.last <> linear.io.o_stream_V_TLAST
+  //  io.o_stream.payload.keep <> linear.io.o_stream_V_TKEEP // not used
+  //  io.o_stream.payload.strb <> linear.io.o_stream_V_TSTRB // not used
 }

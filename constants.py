@@ -9,7 +9,7 @@ ROOT_DIR = os.getcwd()
 SPINAL_DIR = os.path.join(ROOT_DIR, "SPINAL")
 
 # number of blocks
-NUM_BLOCKS = 24  # 24 blocks in DeiT-Tiny, 12 Attention blocks and 12 MLP blocks
+NUM_BLOCKS = 2  # 24 blocks in DeiT-Tiny, 12 Attention blocks and 12 MLP blocks, 2 for testing
 
 # three options
 URAM_DEPTH = 4096

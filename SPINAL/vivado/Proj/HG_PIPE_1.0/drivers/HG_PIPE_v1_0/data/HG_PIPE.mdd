@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER HG_PIPE
+	OPTION supported_peripherals = (HG_PIPE);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = HG_PIPE;
+END DRIVER

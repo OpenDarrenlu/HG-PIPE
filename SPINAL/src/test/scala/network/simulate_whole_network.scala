@@ -2,7 +2,7 @@ package network
 
 object simulate_whole_network extends App {
   val begin_id = -1
-  val close_id = 24
+  val close_id = 2
   val start_time = System.nanoTime()
   val latency = simulate_block_sequence(10, begin_id, close_id, until_stable = false, display = true)
   val end_time = System.nanoTime()

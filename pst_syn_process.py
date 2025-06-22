@@ -178,7 +178,7 @@ def to_spinal_one_block(instances_root: str, block_id, depth_dict=None):
     """
     Two special cases:
     -1: means patch embed
-    24: means head
+    2: means head
     """
 
     if block_id == -1:
@@ -186,7 +186,7 @@ def to_spinal_one_block(instances_root: str, block_id, depth_dict=None):
         block_type = "PATCH_EMBED"
         case_name = "PATCH_EMBED"
         instance_name = "proj_PATCH_EMBED"
-    elif block_id == 24:
+    elif block_id == 2:
         assert depth_dict is None
         block_type = "HEAD"
         case_name = "HEAD"
@@ -270,7 +270,7 @@ def to_spinal_one_block(instances_root: str, block_id, depth_dict=None):
 # -------------------------------------------------------------------------------------
 def to_spinal_all_blocks(instances_root, depth_dicts=None):
     """replace the verilog files in spinal project"""
-    for block_id in range(NUM_BLOCKS):
+    for block_id in range(-1, NUM_BLOCKS+1):
         to_spinal_one_block(instances_root, block_id, None if depth_dicts is None else depth_dicts[block_id])
 # -------------------------------------------------------------------------------------
 

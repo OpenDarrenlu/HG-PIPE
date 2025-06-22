@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Jun 20 12:16:41 2025
+# Process ID: 27140
+# Current directory: F:/master_MLsys/USTC_spring/EDA/Project/HG-PIPE/SPINAL/vivado/Proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28720 F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\vivado\Proj\edit_HG_PIPE_v1_0.xpr
+# Log file: F:/master_MLsys/USTC_spring/EDA/Project/HG-PIPE/SPINAL/vivado/Proj/vivado.log
+# Journal file: F:/master_MLsys/USTC_spring/EDA/Project/HG-PIPE/SPINAL/vivado/Proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/master_MLsys/USTC_spring/EDA/Project/HG-PIPE/SPINAL/vivado/Proj/edit_HG_PIPE_v1_0.xpr
+update_compile_order -fileset sources_1

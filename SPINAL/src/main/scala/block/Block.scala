@@ -29,13 +29,13 @@ class BlockBlackBox(ID: Int) extends BlackBox {
     val ap_idle: Bool = out Bool()
 
     // axi stream interface
-    val i_stream_TDATA: Bits = in Bits (8 * iStreamConfig.dataWidth bits)
-    val i_stream_TREADY: Bool = out Bool()
-    val i_stream_TVALID: Bool = in Bool()
+    val i_stream_V_TDATA: Bits = in Bits (8 * iStreamConfig.dataWidth bits)
+    val i_stream_V_TREADY: Bool = out Bool()
+    val i_stream_V_TVALID: Bool = in Bool()
 
-    val o_stream_TDATA: Bits = out Bits (8 * oStreamConfig.dataWidth bits)
-    val o_stream_TREADY: Bool = in Bool()
-    val o_stream_TVALID: Bool = out Bool()
+    val o_stream_V_TDATA: Bits = out Bits (8 * oStreamConfig.dataWidth bits)
+    val o_stream_V_TREADY: Bool = in Bool()
+    val o_stream_V_TVALID: Bool = out Bool()
 
     // clock and reset
     val ap_clk: Bool = in Bool()
@@ -74,10 +74,10 @@ class Block(ID: Int) extends Component {
   black_box.io.ap_idle <> io.ap_chain.ap_idle
 
   // connect axi stream interface
-  black_box.io.i_stream_TDATA <> io.i_stream.data
-  black_box.io.i_stream_TREADY <> io.i_stream.ready
-  black_box.io.i_stream_TVALID <> io.i_stream.valid
-  black_box.io.o_stream_TDATA <> io.o_stream.data
-  black_box.io.o_stream_TREADY <> io.o_stream.ready
-  black_box.io.o_stream_TVALID <> io.o_stream.valid
+  black_box.io.i_stream_V_TDATA <> io.i_stream.data
+  black_box.io.i_stream_V_TREADY <> io.i_stream.ready
+  black_box.io.i_stream_V_TVALID <> io.i_stream.valid
+  black_box.io.o_stream_V_TDATA <> io.o_stream.data
+  black_box.io.o_stream_V_TREADY <> io.o_stream.ready
+  black_box.io.o_stream_V_TVALID <> io.o_stream.valid
 }

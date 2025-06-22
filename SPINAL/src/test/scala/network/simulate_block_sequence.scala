@@ -50,7 +50,7 @@ object simulate_block_sequence {
       int64_array
     }
 
-    val data_path = "C:/projects/AAAProjects/PROJ06_PyHLS_ViT/binaries/batchsize1/refs/"
+    val data_path = "/mnt/f/master_MLsys/USTC_spring/EDA/Project/HG-PIPE/case/refs/refs/"
 
     def get_block_name(block_id: Int): String = {
       if (block_id == BlockCfg.FIRST_ID) {

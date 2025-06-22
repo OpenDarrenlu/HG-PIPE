@@ -1,0 +1,157 @@
+2025.06.20 11:29:43 INFO  Started: Metals version 1.6.0 in folders 'F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE' for client Visual Studio Code 1.85.2.
+2025.06.20 11:29:43 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:29:50 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:29:59 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:29:59 WARN  no build target for: F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockCfg.scala
+2025.06.20 11:29:59 WARN  no build target for: F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala
+2025.06.20 11:29:59 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockCfg.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:30:17 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:30:17 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:30:18 WARN  no build target for: F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala
+2025.06.20 11:30:18 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:30:17 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:30:22 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:30:37 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:30:38 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:30:38 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:30:38 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:30:38 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:30:53 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:30:53 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:04 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:07 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:18 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:27 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:27 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:27 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:30 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:30 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:30 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:32 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:33 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:34 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:44 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:45 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:45 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:48 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:48 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:48 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:56 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:56 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:56 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:56 WARN  no build target for: F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala
+2025.06.20 11:33:56 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+6月 20, 2025 11:33:56 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 111
+2025.06.20 11:33:56 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:56 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:56 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:33:56 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:06 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:06 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:07 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+6月 20, 2025 11:34:07 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 145
+2025.06.20 11:34:07 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:07 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:09 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:09 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:09 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:10 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:10 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:12 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:12 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:15 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:15 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\test\scala\network\simulate_block_sequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:15 WARN  no build target for: F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\test\scala\network\simulate_block_sequence.scala
+2025.06.20 11:34:15 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\test\scala\network\simulate_block_sequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:16 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\test\scala\network\simulate_block_sequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:15 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\test\scala\network\simulate_block_sequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:16 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\test\scala\network\simulate_block_sequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:18 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\test\scala\network\simulate_block_sequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:18 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:18 WARN  no build target for: F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala
+2025.06.20 11:34:18 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:18 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:18 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:34:19 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:36:57 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:36:59 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:36:59 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:36:59 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:00 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:02 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\fc\FC.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:02 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:02 WARN  no build target for: F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala
+2025.06.20 11:37:02 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:02 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:02 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:03 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:03 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:03 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+6月 20, 2025 11:37:04 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 187
+2025.06.20 11:37:03 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:06 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:06 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:06 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:12 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:17 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:17 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:17 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:24 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:24 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:24 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:29 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:29 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:33 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:33 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:33 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:34 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:34 INFO  Created report: Optional[file:///F:/master_MLsys/USTC_spring/EDA/Project/HG-PIPE/SPINAL/src/main/scala/block/Block.scala]
+2025.06.20 11:37:34 INFO  empty definition using pc, found symbol in pc: `<none>`. (full report at: "F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\.metals\.reports\metals-full\2025-06-20\r_empty-definition_11-37-34-907.md")
+2025.06.20 11:37:46 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:56 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\Block.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:56 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:56 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:56 WARN  no build target for: F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala
+2025.06.20 11:37:56 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:56 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:56 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:56 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:56 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:57 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:57 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:57 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:37:59 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:01 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:01 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:01 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:01 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:03 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:03 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:04 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:04 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:04 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:05 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:05 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:06 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:06 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:07 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:12 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:12 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:12 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:17 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:17 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:17 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:18 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:38:30 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.20 11:39:19 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\main\scala\block\BlockSequence.scala. Using presentation compiler with project's scala-library version: 3.3.6
+6月 20, 2025 11:40:45 上午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+2025.06.20 12:24:33 INFO  Shutting down server
+2025.06.20 12:24:33 INFO  shutting down Metals
+2025.06.20 12:24:33 INFO  Exiting server
+2025.06.21 11:59:17 INFO  Started: Metals version 1.6.0 in folders 'F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE' for client Visual Studio Code 1.85.2.
+2025.06.21 11:59:18 INFO  no build target found for F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE\SPINAL\src\test\scala\network\simulate_whole_network.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.06.21 23:32:31 INFO  Started: Metals version 1.6.0 in folders 'F:\master_MLsys\USTC_spring\EDA\Project\HG-PIPE' for client Visual Studio Code 1.85.2.

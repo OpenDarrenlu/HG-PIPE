@@ -5,7 +5,7 @@ import spinal.core._
 
 object generate_whole_network_verilog extends App {
   val begin_id = -1
-  val close_id = 24
+  val close_id = 2
   // spinal config
   val config = SpinalConfig(
     defaultConfigForClockDomains = ClockDomainConfig(resetKind = SYNC, resetActiveLevel = LOW)

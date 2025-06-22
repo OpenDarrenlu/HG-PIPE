@@ -6,9 +6,9 @@ import spinal.lib.bus.amba4.axis.Axi4StreamConfig
 object BlockCfg {
 
   // block ids
-  // total 24 blocks, attn - mlp - attn - mlp ...
+  // total 2 blocks, attn - mlp
   val FIRST_ID = -1
-  val LAST_ID = 24
+  val LAST_ID = 2
 
   // but there exist -1 and 24. PatchEmbed and Head
   private val BLOCK_IDS: Array[Int] = (FIRST_ID to LAST_ID).toArray
@@ -36,17 +36,6 @@ object BlockCfg {
 
   val BLOCK_TYPES: Map[Int, String] = BLOCK_IDS.zip(Array(
     "PATCH_EMBED",
-    "ATTN", "MLP",
-    "ATTN", "MLP",
-    "ATTN", "MLP",
-    "ATTN", "MLP",
-    "ATTN", "MLP",
-    "ATTN", "MLP",
-    "ATTN", "MLP",
-    "ATTN", "MLP",
-    "ATTN", "MLP",
-    "ATTN", "MLP",
-    "ATTN", "MLP",
     "ATTN", "MLP",
     "HEAD"
   )).toMap

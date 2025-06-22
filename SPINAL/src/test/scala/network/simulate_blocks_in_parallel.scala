@@ -10,7 +10,7 @@ object simulate_blocks_in_parallel extends App {
 
   // select some blocks
   // cannot parallel simulate all blocks, the reason is unknown
-  val selected_ids = -1 to 24
+  val selected_ids = -1 to 2
 
   // get start time
   val start_time = System.nanoTime()

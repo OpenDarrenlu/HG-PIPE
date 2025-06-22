@@ -6,7 +6,7 @@ INSTANCE_DIR = os.path.join(ROOT_DIR, "instances")
 
 case_list = [
     "PATCH_EMBED",
-    *[f"{layer_id % 2 == 0 and 'ATTN' or 'MLP'}{layer_id//2}" for layer_id in range(24)],
+    *[f"{layer_id % 2 == 0 and 'ATTN' or 'MLP'}{layer_id//2}" for layer_id in range(2)],
     "HEAD"
 ]
 
@@ -20,5 +20,5 @@ print(case_list)
 to_spinal_all_blocks(INSTANCE_DIR)
 launch_all_spinal_sim()
 
-for i, case_name in zip(range(-1, 25), case_list):
+for i, case_name in zip(range(-1, 3), case_list):
     print(f"Latency of {case_name:15} is {get_latency(i)}")
