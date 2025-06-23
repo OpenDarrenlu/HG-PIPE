@@ -17,7 +17,7 @@ template<
     int     H,                  // head number
     int     T,                  // input  feature map sequence length, shared by all layers
     int     TP,                 // input  feature map sequence parallel degree
-    int     C,                  // input & output feature map channels, aka "embed_dim"
+    int     C,                  // input & output feature map channels
     int     CAP,                // input & output feature map channel adaptive parallel degree, also for output
     int     RESI_CP,            // residual parallel degree
 

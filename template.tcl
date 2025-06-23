@@ -31,7 +31,7 @@ open_solution "solution"
 # set_part xczu9eg-ffvb1156-2-e
 set_part xczu5ev-sfvc784-1-e
 set_top top
-create_clock -period 2.5
+create_clock -period 3.125
 config_export -format ip_catalog -rtl verilog  -vivado_phys_opt ${phys_opt}
 # -vivado_clock 2.5 The 'config_export -vivado_clock' hidden command is not supported in 2020.2.
 

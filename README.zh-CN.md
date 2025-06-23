@@ -157,6 +157,13 @@ python step3_spinal_flow.py
 这会打印所有层的仿真延迟，单位为周期数。整个加速器是流水线形式运行的，因此加速器延迟为最慢的层的延迟（57625周期）。
 
 ```text
+# my result
+Latency of PATCH_EMBED     is 56449
+Latency of ATTN0           is 100700
+Latency of MLP0            is 100359
+Latency of HEAD            is 57625
+#end
+
 Latency of PATCH_EMBED     is 56449
 Latency of ATTN0           is 57625
 Latency of MLP0            is 56449
